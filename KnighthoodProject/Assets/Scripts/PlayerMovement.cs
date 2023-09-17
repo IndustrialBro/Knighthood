@@ -4,33 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Vector2 rot;
-    [SerializeField]
-    Transform pivot;
-    [SerializeField]
-    float sensitivity;
     [SerializeField]
     float speed;
     Rigidbody rb;
+    bool isgrounded;
+    [SerializeField]
+    Transform RayOrigin;
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
     }
 
     
     void Update()
     {
-        LookAround();
+        CheckIfGrounded();
+        Jump();
         WalkAround();
-    }
-
-    void LookAround()
-    {
-        rot.x += Input.GetAxisRaw("Mouse X");
-        rot.y += Input.GetAxisRaw("Mouse Y");
-        pivot.localRotation = Quaternion.Euler(-rot.y * sensitivity, 0, 0);
-        transform.rotation = Quaternion.Euler(0, rot.x * sensitivity, 0);
     }
 
     void WalkAround()
@@ -46,5 +36,26 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
             rb.velocity = transform.right * speed;
+    }
+
+    void Jump()
+    {
+        if(isgrounded)
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(transform.up, ForceMode.Impulse);
+            }
+        }
+    }
+
+    void CheckIfGrounded()
+    {
+        Ray r = new Ray(RayOrigin.position, -transform.up);
+        Physics.Raycast(r, out RaycastHit hit, 0.2f);
+        if (hit.collider != null)
+            isgrounded = true;
+        else
+            isgrounded= false;
     }
 }
