@@ -21,9 +21,15 @@ public class PlayerLookAround : MonoBehaviour
 
     void LookAround()
     {
-        rot.x += Input.GetAxisRaw("Mouse X");
-        rot.y += Input.GetAxisRaw("Mouse Y");
-        pivot.localRotation = Quaternion.Euler(-rot.y * sensitivity, 0, 0);
-        transform.rotation = Quaternion.Euler(0, rot.x * sensitivity, 0);
+        rot.x += Input.GetAxisRaw("Mouse X") * sensitivity;
+        rot.y += Input.GetAxisRaw("Mouse Y") * sensitivity;
+
+        if (rot.y > 90)
+            rot.y = 90;
+        if (rot.y < -90)
+            rot.y = -90;
+
+        pivot.localRotation = Quaternion.Euler(-rot.y, 0, 0);
+        transform.rotation = Quaternion.Euler(0, rot.x, 0);
     }
 }

@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    Rigidbody rb;
     [SerializeField]
     float speed;
-    Rigidbody rb;
-    bool isgrounded;
     [SerializeField]
     Transform RayOrigin;
     void Start()
@@ -18,44 +17,17 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        CheckIfGrounded();
-        Jump();
         WalkAround();
     }
 
     void WalkAround()
     {
-        if (Input.GetKey(KeyCode.W))
-            rb.velocity = transform.forward * speed;
-
-        if (Input.GetKey(KeyCode.S))
-            rb.velocity = -transform.forward * speed;
-
-        if (Input.GetKey(KeyCode.A))
-            rb.velocity = -transform.right * speed;
-
-        if (Input.GetKey(KeyCode.D))
-            rb.velocity = transform.right * speed;
-    }
-
-    void Jump()
-    {
-        if(isgrounded)
-        {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                rb.AddForce(transform.up, ForceMode.Impulse);
-            }
-        }
-    }
-
-    void CheckIfGrounded()
-    {
-        Ray r = new Ray(RayOrigin.position, -transform.up);
-        Physics.Raycast(r, out RaycastHit hit, 0.2f);
-        if (hit.collider != null)
-            isgrounded = true;
-        else
-            isgrounded= false;
+        float horMove = Input.GetAxisRaw("Horizontal");
+        float verMove = Input.GetAxisRaw("Vertical");
+        
+        Vector3 localMove = new Vector3(horMove * speed, 0, verMove * speed);
+        Vector3 globalMove = transform.TransformDirection(localMove);
+        
+        rb.velocity = new Vector3(globalMove.x, rb.velocity.y, globalMove.z);
     }
 }
