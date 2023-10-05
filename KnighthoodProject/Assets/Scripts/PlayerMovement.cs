@@ -14,13 +14,13 @@ public class PlayerMovement : MonoBehaviour
     float verMove;
 
     [Header("Running")]
+
     [SerializeField]
     float runningSpeed;
-    [SerializeField]
-    float maxStamina;
     float currStamina;
+
     [SerializeField]
-    float maxRunningCooldown;
+    float maxRunningCooldown, maxStamina, staminaRecMod;
     float currRunningCooldown = 0;
     void Start()
     {
@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if(currStamina > 0)
             {
+                //Stamina expension
                 if (isRunning())
                 {
                     verMove = verMove * runningSpeed;
@@ -67,9 +68,14 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             currRunningCooldown -= Time.deltaTime;
-            currStamina += Time.deltaTime;
-            Debug.Log(currRunningCooldown);
         }
+
+        //Stamina recovery
+        if(currStamina < maxStamina && !isRunning())
+        {
+            currStamina += Time.deltaTime * staminaRecMod;
+        }
+        Debug.Log(currStamina);
     }
 
     private bool isRunning()
