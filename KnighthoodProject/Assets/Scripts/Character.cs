@@ -2,16 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public abstract class Character : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int health {  get; private set; }
+    public int armour { get; private set; }
+    [SerializeField]
+    GameObject armament;
+    protected void Start()
     {
-        
+        EquipWeapon();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected void TakeDamage(int howMuch)
+    {
+        health -= howMuch;
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
+    protected abstract void Die();
+    protected void GetHit(Attack strike)
+    {
+        if(strike.armourPen > armour)
+        {
+            TakeDamage(strike.damage);
+        }
+    }
+    protected void EquipWeapon()
     {
         
     }
