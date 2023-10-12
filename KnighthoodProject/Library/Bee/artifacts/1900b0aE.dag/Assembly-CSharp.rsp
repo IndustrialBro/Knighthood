@@ -367,6 +367,7 @@
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/PlayerWeapon.cs"
 "Assets/Scripts/Weapon.cs"
+"Assets/Scripts/Weapons/Player/LongSword.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 

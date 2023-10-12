@@ -9,7 +9,8 @@ public abstract class Weapon : MonoBehaviour
     protected bool attReady = true;
     protected bool attacking = false;
     [SerializeField]
-    protected float maxAttCool, currAttCool;
+    protected float maxAttCool;
+    protected float currAttCool;
     //Fronta útokù
     protected List<Attack> attQueue = new List<Attack>();
     [SerializeField]
@@ -46,7 +47,19 @@ public abstract class Weapon : MonoBehaviour
     {
         if(attQueue.Count > 0)
         {
+            if (attQueue[0].light)
+                Debug.Log("Lehký");
+            else
+                Debug.Log("Tìžký");
+            attQueue.RemoveAt(0);
+        }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (attacking)
+        {
+            other.GetComponent<HostileChar>().GetHit(attQueue[0]);
         }
     }
 }

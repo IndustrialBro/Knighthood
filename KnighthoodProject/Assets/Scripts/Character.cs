@@ -8,6 +8,8 @@ public abstract class Character : MonoBehaviour
     public int armour { get; private set; }
     [SerializeField]
     GameObject armament;
+    [SerializeField]
+    Transform weaponSlot;
     protected void Start()
     {
         EquipWeapon();
@@ -22,7 +24,7 @@ public abstract class Character : MonoBehaviour
         }
     }
     protected abstract void Die();
-    protected void GetHit(Attack strike)
+    public void GetHit(Attack strike)
     {
         if(strike.armourPen > armour)
         {
@@ -31,6 +33,6 @@ public abstract class Character : MonoBehaviour
     }
     protected void EquipWeapon()
     {
-        
+        Instantiate(armament).transform.SetParent(weaponSlot, false);
     }
 }

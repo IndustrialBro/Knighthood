@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     float speed;
     [SerializeField]
     Transform RayOrigin;
+    [SerializeField]
+    float jumpForce;
     float horMove;
     float verMove;
 
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         WalkAround();
+        JumpAround();
     }
 
     void WalkAround()
@@ -45,6 +48,16 @@ public class PlayerMovement : MonoBehaviour
         Vector3 globalMove = transform.TransformDirection(localMove);
         
         rb.velocity = new Vector3(globalMove.x, rb.velocity.y, globalMove.z);
+    }
+    void JumpAround()
+    {
+        if(Input.GetAxisRaw("Jump") > 0)
+        {
+            if (isGrounded())
+            {
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            }
+        }
     }
 
     void ProcessRunning()
@@ -75,11 +88,19 @@ public class PlayerMovement : MonoBehaviour
         {
             currStamina += Time.deltaTime * staminaRecMod;
         }
-        Debug.Log(currStamina);
     }
 
-    private bool isRunning()
+    bool isRunning()
     {
         return Input.GetAxisRaw("Run") > 0;
+    }
+    bool isGrounded()
+    {
+        Physics.Raycast(RayOrigin.position, Vector3.down, out RaycastHit hit, 0.2f);
+        if (hit.collider != null)
+        {
+            return true;
+        }
+        else return false;
     }
 }
