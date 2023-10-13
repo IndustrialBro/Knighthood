@@ -192,10 +192,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6226477024861444524}
   - component: {fileID: 6226477024861444522}
-  - component: {fileID: 6226477024861444525}
-  - component: {fileID: 6226477024861444523}
-  - component: {fileID: 6226477024861444520}
   - component: {fileID: 589896621}
+  - component: {fileID: 1406293342}
+  - component: {fileID: 1406293341}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -234,55 +233,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 6226477024495593082}
   sensitivity: 1
---- !u!114 &6226477024861444525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6226477024861444527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b275f7f300a93408ce0437952b038c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 750
-  RayOrigin: {fileID: 2006446938}
-  jumpForce: 0.35
-  runningSpeed: 2
-  maxRunningCooldown: 5
-  maxStamina: 3
-  staminaRecMod: 1
---- !u!54 &6226477024861444523
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6226477024861444527}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
---- !u!136 &6226477024861444520
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6226477024861444527}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.8
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &589896621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +248,42 @@ MonoBehaviour:
   armament: {fileID: 6341645884255127375, guid: 157355c52a4f3e145b73c6b719260eca,
     type: 3}
   weaponSlot: {fileID: 7126846326998662788}
+--- !u!143 &1406293342
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226477024861444527}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.8
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.05
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &1406293341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226477024861444527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfe6c4571e78904aa06dfbfb712df9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  jumpForce: 10
+  runningSpeed: 1.5
+  maxRunningCooldown: 1
+  maxStamina: 3
+  staminaRecMod: 1
 --- !u!1 &6607825439113127208
 GameObject:
   m_ObjectHideFlags: 0

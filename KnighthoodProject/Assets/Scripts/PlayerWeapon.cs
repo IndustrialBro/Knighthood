@@ -10,7 +10,7 @@ public abstract class PlayerWeapon : Weapon
 
     protected override void ProcessInputs()
     {
-        if(Input.GetAxisRaw("Fire1") > 0)
+        if(Input.GetButton("Fire1"))
         {
             mouseDownTime += Time.deltaTime;
         }

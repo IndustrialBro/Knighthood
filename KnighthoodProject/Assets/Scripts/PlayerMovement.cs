@@ -34,28 +34,26 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         WalkAround();
-        JumpAround();
     }
 
     void WalkAround()
     {
-        horMove = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
-        verMove = Input.GetAxisRaw("Vertical") * Time.deltaTime;
+        JumpAround();
+
+        horMove = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed;
+        verMove = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
 
         ProcessRunning();
-        
-        Vector3 localMove = new Vector3(horMove * speed, 0, verMove * speed);
-        Vector3 globalMove = transform.TransformDirection(localMove);
-        
-        rb.velocity = new Vector3(globalMove.x, rb.velocity.y, globalMove.z);
+
+        transform.Translate(horMove, 0, verMove);
     }
     void JumpAround()
     {
-        if(Input.GetAxisRaw("Jump") > 0)
+        if(Input.GetButtonDown("Jump"))
         {
             if (isGrounded())
             {
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                rb.AddForce(Vector3.up * jumpForce);
             }
         }
     }
@@ -67,9 +65,9 @@ public class PlayerMovement : MonoBehaviour
             if(currStamina > 0)
             {
                 //Stamina expension
-                if (isRunning())
+                if (Input.GetButton("Run"))
                 {
-                    verMove = verMove * runningSpeed;
+                    verMove *= runningSpeed;
                     currStamina -= Time.deltaTime;
                 }
             }
@@ -84,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Stamina recovery
-        if(currStamina < maxStamina && !isRunning())
+        if(currStamina < maxStamina && !Input.GetButton("Run"))
         {
             currStamina += Time.deltaTime * staminaRecMod;
         }
@@ -96,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     }
     bool isGrounded()
     {
-        Physics.Raycast(RayOrigin.position, Vector3.down, out RaycastHit hit, 0.2f);
+        Physics.Raycast(RayOrigin.position, Vector3.down, out RaycastHit hit, 0.1f);
         if (hit.collider != null)
         {
             return true;

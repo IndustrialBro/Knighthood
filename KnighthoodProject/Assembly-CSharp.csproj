@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\PlayerWeapon.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\HostileWeapon.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovementWPrebuilt.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PlayerChar.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />

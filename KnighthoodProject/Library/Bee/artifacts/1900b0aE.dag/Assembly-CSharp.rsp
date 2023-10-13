@@ -365,6 +365,7 @@
 "Assets/Scripts/PlayerChar.cs"
 "Assets/Scripts/PlayerLookAround.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/PlayerMovementWPrebuilt.cs"
 "Assets/Scripts/PlayerWeapon.cs"
 "Assets/Scripts/Weapon.cs"
 "Assets/Scripts/Weapons/Player/LongSword.cs"
