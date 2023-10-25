@@ -1,21 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    public int health {  get; private set; }
-    public int armour { get; private set; }
+    [SerializeField]
+    protected short health, armour;
     [SerializeField]
     GameObject armament;
     [SerializeField]
     Transform weaponSlot;
+    public bool isBlocking;
+
     protected void Start()
     {
         EquipWeapon();
+        SetTag();
     }
 
-    protected void TakeDamage(int howMuch)
+    protected void TakeDamage(short howMuch)
     {
         health -= howMuch;
         if(health <= 0)
@@ -24,9 +29,9 @@ public abstract class Character : MonoBehaviour
         }
     }
     protected abstract void Die();
-    public void GetHit(Attack strike)
+    public virtual void GetHit(Attack strike)
     {
-        if(strike.armourPen > armour)
+        if (strike.armourPen > armour && !isBlocking)
         {
             TakeDamage(strike.damage);
         }
@@ -35,4 +40,5 @@ public abstract class Character : MonoBehaviour
     {
         Instantiate(armament).transform.SetParent(weaponSlot, false);
     }
+    protected abstract void SetTag();
 }

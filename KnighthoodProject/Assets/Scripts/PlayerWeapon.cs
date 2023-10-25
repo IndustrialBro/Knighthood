@@ -16,13 +16,25 @@ public abstract class PlayerWeapon : Weapon
         }
         else if (mouseDownTime >= heavyAttTimer)
         {
-            attQueue.Add(heavyAttack);
             mouseDownTime = 0;
+            attackQueue.Enqueue(heavyAttack);
+            return;
         }
         else if(mouseDownTime > 0)
         {
-            attQueue.Add(lightAttack);
             mouseDownTime = 0;
+            attackQueue.Enqueue(lightAttack);
+            return;
         }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            dude.isBlocking = true;
+        }
+    }
+
+    protected override void SetTargetTag()
+    {
+        targetTag = "Hostile";
     }
 }

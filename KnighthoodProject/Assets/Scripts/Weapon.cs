@@ -1,65 +1,107 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
+    [SerializeField]
+    public AnimatorController animCon;
+    Animator anim;
+
+    protected Queue<Attack> attackQueue = new Queue<Attack>();
     protected Attack lightAttack;
     protected Attack heavyAttack;
-    protected bool attReady = true;
+    protected Attack currAtt;
     protected bool attacking = false;
+    protected bool attReady = false;
+    protected string targetTag;
+
+    //Animace útokù
     [SerializeField]
-    protected float maxAttCool;
-    protected float currAttCool;
-    //Fronta útokù
-    protected List<Attack> attQueue = new List<Attack>();
+    protected int maxAttSpree;
+    protected int attSpree = 0;
     [SerializeField]
-    protected float maxQueueCool;
-    protected float currQueueCool;
+    protected float resetSpreeTimer;
+    Coroutine AttSpreeResetCoroutine = null;
+    Coroutine ResetAttackingCoroutine = null;
+
+    //Blokování
+    protected Character dude;
+
+    private void Awake()
+    {
+        dude = GetComponentInParent<Character>();
+    }
+
     protected void Start()
     {
         CreateAttacks();
+        anim = GetComponentInParent<Animator>();
+        anim.runtimeAnimatorController = animCon;
+        SetTargetTag();
     }
 
-    
     protected void Update()
     {
         ProcessInputs();
-        ProcessCooldowns();
-        ExecuteAttacks();
+        MoveThroughQueue();
     }
 
-    protected abstract void CreateAttacks(); //Každá zbraò si to udìlá sama lol
-    protected void ProcessCooldowns()
-    {
-        if(attacking && currAttCool > 0)
-        {
-            currAttCool -= Time.deltaTime;
-        }
-
-        if(attQueue.Count > 0 && currQueueCool > 0)
-        {
-            currQueueCool -= Time.deltaTime;
-        }
-    }
+    protected abstract void CreateAttacks(); //Každá zbraò si to udìlá sama
     protected abstract void ProcessInputs(); //Zaøídí tøídy PlayerWeapon a HostileWeapon nebo jak je pojmenuju
-    protected void ExecuteAttacks()
+    protected void MoveThroughQueue()
     {
-        if(attQueue.Count > 0)
+        if(attackQueue.Count > 0 && !attacking) 
         {
-            if (attQueue[0].light)
-                Debug.Log("Lehký");
-            else
-                Debug.Log("Tìžký");
-            attQueue.RemoveAt(0);
+            Debug.Log(attackQueue.Count);
+            ExecuteAttacks(attackQueue.Dequeue());
+        }
+    }
+    protected void ExecuteAttacks(Attack Att)
+    {
+        attacking = true;
+        currAtt = Att;
+        AnimateAttacks(Att);
+        ResetAttackingCoroutine = StartCoroutine(ResetAttacking());
+    }
+
+    protected void OnTriggerEnter(Collider other)
+    {
+        if (attacking && other.tag == targetTag)
+        {
+            other.GetComponent<Character>().GetHit(currAtt);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void AnimateAttacks(Attack attack)
     {
-        if (attacking)
-        {
-            other.GetComponent<HostileChar>().GetHit(attQueue[0]);
-        }
+        if (AttSpreeResetCoroutine != null)
+            StopCoroutine(AttSpreeResetCoroutine);
+        
+        attSpree++;
+        anim.SetBool("IsHeavy", !attack.light);
+        anim.SetInteger("AttCount", attSpree);
+        anim.SetTrigger("Attack");
+        
+        if (attSpree == maxAttSpree)
+            attSpree = 0;
+        else
+            AttSpreeResetCoroutine = StartCoroutine(ResetAttSpree());
     }
+    protected IEnumerator ResetAttacking() 
+    {
+        //float temp = anim.GetCurrentAnimatorStateInfo(0).length;
+        float temp = 1;
+        Debug.Log(temp);
+        yield return new WaitForSeconds(temp);
+        attacking = false;
+    }
+    protected IEnumerator ResetAttSpree()
+    {
+        yield return new WaitForSeconds(resetSpreeTimer);
+        attSpree = 0;
+        Debug.Log("Spree reset");
+    }
+    protected abstract void SetTargetTag();
 }

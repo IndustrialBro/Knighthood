@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Attack
 {
-    public int damage {  get; private set; }
-    public int armourPen {  get; private set; }
+    public byte damage {  get; private set; }
+    public byte armourPen {  get; private set; }
     public bool light {  get; private set; }
-    public Attack(int damage, int armourPen, bool light)
+    public Attack(byte damage, byte armourPen, bool light)
     {
         this.damage = damage;
         this.armourPen = armourPen;

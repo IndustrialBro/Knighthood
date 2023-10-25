@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementWPrebuilt : MonoBehaviour
 {
@@ -11,22 +13,30 @@ public class PlayerMovementWPrebuilt : MonoBehaviour
     float verMove;
     float horMove;
     float yMovement;
-    [SerializeField]
-    float jumpVel;
-    bool isJumping = false;
+    
     [Header("Running")]
 
     [SerializeField]
     float runningSpeed;
-    float currStamina;
+    public float currStamina;
 
     [SerializeField]
     float maxRunningCooldown, maxStamina, staminaRecMod;
     float currRunningCooldown = 0;
 
+    [Header("Jumping")]
+    [SerializeField]
+    float maxJumpTime;
+    [SerializeField]
+    float maxJumpHeight;
+    float jumpVel, grav;
+    bool isJumping;
+
+
     private void Awake()
     {
         cc = GetComponent<CharacterController>();
+        SetUpJumpVars();
     }
 
     // Update is called once per frame
@@ -43,18 +53,18 @@ public class PlayerMovementWPrebuilt : MonoBehaviour
         ProcessRunning();
 
         Vector3 localMove = new Vector3(horMove, yMovement, verMove);
-        Vector3 globalMove = transform.TransformDirection(localMove);
-        Debug.Log($"{globalMove.y} {cc.isGrounded}");
-        cc.Move(Vector3.ClampMagnitude(globalMove, 1) * speed);
+        Vector3 globalMove = transform.TransformDirection(localMove).normalized;
+
+        cc.Move(globalMove * speed);
         HandleGravity();
-        JumpAround();
+        HandleJump();
     }
 
     void ProcessRunning()
     {
         if (currRunningCooldown <= 0)
         {
-            if (currStamina > 0)
+            if (currStamina > 0 && cc.isGrounded)
             {
                 //Stamina expension
                 if (Input.GetButton("Run"))
@@ -84,23 +94,32 @@ public class PlayerMovementWPrebuilt : MonoBehaviour
         if(cc.isGrounded)
         {
             yMovement = -0.5f;
-            isJumping = false;
-        }
-        else if(isJumping)
-        {
-            yMovement -= 0.5f * Time.deltaTime;
         }
         else 
         { 
-            yMovement -= 9.8f;
+            yMovement -= grav * Time.deltaTime;
         }
     }
-    void JumpAround()
+
+    void SetUpJumpVars()
     {
-        if(Input.GetButtonDown("Jump") && cc.isGrounded)
+        float timeToApex = maxJumpTime / 2;
+        grav = (2 * maxJumpHeight) / Mathf.Pow(timeToApex, 2);
+        jumpVel = (2 * maxJumpHeight) / timeToApex;
+    }
+    void HandleJump()
+    {
+        if (cc.isGrounded)
         {
-            isJumping = true;
-            yMovement = jumpVel;
+            if (!isJumping && Input.GetButtonDown("Jump"))
+            {
+                isJumping = true;
+                yMovement = jumpVel;
+            }
+            else if (isJumping)
+            {
+                isJumping = false;
+            }
         }
     }
 }
