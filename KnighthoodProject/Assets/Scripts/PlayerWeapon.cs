@@ -29,7 +29,7 @@ public abstract class PlayerWeapon : Weapon
 
         if (Input.GetButtonDown("Fire2"))
         {
-            dude.isBlocking = true;
+            Block();
         }
     }
 

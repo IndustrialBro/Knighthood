@@ -14,7 +14,7 @@ public abstract class Weapon : MonoBehaviour
     protected Attack heavyAttack;
     protected Attack currAtt;
     protected bool attacking = false;
-    protected bool attReady = false;
+    protected bool attReady = true;
     protected string targetTag;
 
     //Animace útokù
@@ -24,19 +24,17 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     protected float resetSpreeTimer;
     Coroutine AttSpreeResetCoroutine = null;
-    Coroutine ResetAttackingCoroutine = null;
 
     //Blokování
     protected Character dude;
-
-    private void Awake()
-    {
-        dude = GetComponentInParent<Character>();
-    }
+    [SerializeField]
+    float blockCost;
 
     protected void Start()
     {
         CreateAttacks();
+        dude = GetComponentInParent<Character>();
+        dude.blockCost = blockCost;
         anim = GetComponentInParent<Animator>();
         anim.runtimeAnimatorController = animCon;
         SetTargetTag();
@@ -52,18 +50,20 @@ public abstract class Weapon : MonoBehaviour
     protected abstract void ProcessInputs(); //Zaøídí tøídy PlayerWeapon a HostileWeapon nebo jak je pojmenuju
     protected void MoveThroughQueue()
     {
-        if(attackQueue.Count > 0 && !attacking) 
+        if(attackQueue.Count > 0 && attReady)
         {
-            Debug.Log(attackQueue.Count);
+            Debug.Log($"Attacks in queue: {attackQueue.Count}");
             ExecuteAttacks(attackQueue.Dequeue());
         }
     }
     protected void ExecuteAttacks(Attack Att)
     {
+        attReady = false;
         attacking = true;
         currAtt = Att;
         AnimateAttacks(Att);
-        ResetAttackingCoroutine = StartCoroutine(ResetAttacking());
+        StartCoroutine(ResetAttReady());
+        StartCoroutine(ResetAttacking());
     }
 
     protected void OnTriggerEnter(Collider other)
@@ -78,22 +78,31 @@ public abstract class Weapon : MonoBehaviour
     {
         if (AttSpreeResetCoroutine != null)
             StopCoroutine(AttSpreeResetCoroutine);
-        
+
         attSpree++;
         anim.SetBool("IsHeavy", !attack.light);
         anim.SetInteger("AttCount", attSpree);
-        anim.SetTrigger("Attack");
-        
+        anim.SetBool("AAIQ", true); //AAIQ == Are (there) Attacks In Queue (pùvodnì mìl fungovat jinak, ale to nedìlalo co jsem chtìl [ne že by tohle dìlalo])
+
         if (attSpree == maxAttSpree)
             attSpree = 0;
         else
             AttSpreeResetCoroutine = StartCoroutine(ResetAttSpree());
+        Debug.Log($"Current state: {anim.GetCurrentAnimatorStateInfo(0).IsName("Idle")}");
+    }
+    protected IEnumerator ResetAttReady()
+    {
+        //float temp = anim.GetCurrentAnimatorStateInfo(0).length;
+        //Debug.Log($"temp == {temp}");
+        float temp = 1;
+        yield return new WaitForSeconds(temp);
+        attReady = true;
+        anim.SetBool("AAIQ", false);
     }
     protected IEnumerator ResetAttacking() 
     {
         //float temp = anim.GetCurrentAnimatorStateInfo(0).length;
         float temp = 1;
-        Debug.Log(temp);
         yield return new WaitForSeconds(temp);
         attacking = false;
     }
@@ -101,7 +110,12 @@ public abstract class Weapon : MonoBehaviour
     {
         yield return new WaitForSeconds(resetSpreeTimer);
         attSpree = 0;
-        Debug.Log("Spree reset");
+        //Debug.Log("Spree reset");
     }
     protected abstract void SetTargetTag();
+    protected void Block()
+    {
+        attackQueue.Clear();
+        dude.isBlocking = true;
+    }
 }

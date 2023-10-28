@@ -13,6 +13,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField]
     Transform weaponSlot;
     public bool isBlocking;
+    public float blockCost;
 
     protected void Start()
     {

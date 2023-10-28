@@ -8,8 +8,6 @@ public class PlayerChar : Character
     GameObject DeathScreen;
     PlayerMovementWPrebuilt pm;
 
-    [SerializeField]
-    float blockCost;
 
     protected override void Die()
     {

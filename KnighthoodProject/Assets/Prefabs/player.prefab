@@ -570,6 +570,8 @@ MonoBehaviour:
   armament: {fileID: 6341645884255127375, guid: 157355c52a4f3e145b73c6b719260eca,
     type: 3}
   weaponSlot: {fileID: 8821512808157491843}
+  isBlocking: 0
+  blockCost: 0
   DeathScreen: {fileID: 0}
 --- !u!143 &8821512808120033079
 CharacterController:
@@ -603,6 +605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   runningSpeed: 1.5
+  currStamina: 0
   maxRunningCooldown: 1
   maxStamina: 3
   staminaRecMod: 1
@@ -1694,7 +1697,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
