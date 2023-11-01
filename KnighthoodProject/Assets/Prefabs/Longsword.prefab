@@ -50,7 +50,7 @@ MonoBehaviour:
   animCon: {fileID: 9100000, guid: f3b94bc807f4cb74da4e8947d0d15895, type: 2}
   maxAttSpree: 2
   resetSpreeTimer: 1.2
-  blockCost: 0
+  blockCost: 0.6
   heavyAttTimer: 0.2
 --- !u!65 &6341645884255127361
 BoxCollider:
