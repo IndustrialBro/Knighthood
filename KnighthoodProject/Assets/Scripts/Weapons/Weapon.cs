@@ -53,7 +53,6 @@ public abstract class Weapon : MonoBehaviour
     {
         if(attackQueue.Count > 0 && attReady)
         {
-            Debug.Log($"Attacks in queue: {attackQueue.Count}");
             ExecuteAttacks(attackQueue.Dequeue());
         }
     }
@@ -94,13 +93,12 @@ public abstract class Weapon : MonoBehaviour
             attSpree = 0;
         else
             AttSpreeResetCoroutine = StartCoroutine(ResetAttSpree());
-        Debug.Log($"Current state: {anim.GetCurrentAnimatorStateInfo(0).IsName("Idle")}");
     }
     protected IEnumerator ResetAttReady()
     {
         //float temp = anim.GetNextAnimatorStateInfo(0).length;
         //Debug.Log($"temp == {temp}");
-        float temp = 0.7f;
+        float temp = 0.8f;
         yield return new WaitForSeconds(temp);
         attReady = true;
         //anim.SetBool("AAIQ", false);
@@ -108,7 +106,7 @@ public abstract class Weapon : MonoBehaviour
     protected IEnumerator ResetAttacking() 
     {
         //float temp = anim.GetNextAnimatorStateInfo(0).length;
-        float temp = 1f;
+        float temp = 0.8f;
         yield return new WaitForSeconds(temp);
         attacking = false;
     }
