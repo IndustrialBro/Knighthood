@@ -9,8 +9,8 @@ public abstract class Weapon : MonoBehaviour
     Animator anim;
     
     protected Queue<Attack> attackQueue = new Queue<Attack>();
-    protected Attack lightAttack;
-    protected Attack heavyAttack;
+    [SerializeField]
+    protected Attack lightAttack, heavyAttack;
     protected Attack currAtt;
     protected bool attacking = false;
     protected bool attReady = true;
@@ -33,7 +33,6 @@ public abstract class Weapon : MonoBehaviour
 
     protected void Start()
     {
-        CreateAttacks();
         dude = GetComponentInParent<Ihad>();
         dude.blockCost = blockCost;
         anim = GetComponentInParent<Animator>();
@@ -47,7 +46,6 @@ public abstract class Weapon : MonoBehaviour
         MoveThroughQueue();
     }
 
-    protected abstract void CreateAttacks(); //Každá zbraò si to udìlá sama
     protected abstract void ProcessInputs(); //Zaøídí tøídy PlayerWeapon a HostileWeapon nebo jak je pojmenuju
     protected void MoveThroughQueue()
     {

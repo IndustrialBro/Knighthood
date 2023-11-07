@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack
+[CreateAssetMenu(fileName = "Attack", menuName = "ScriptableObjects/Attack")]
+public class Attack : ScriptableObject
 {
-    public byte damage {  get; private set; }
-    public byte armourPen {  get; private set; }
-    public bool light {  get; private set; }
-    public Attack(byte damage, byte armourPen, bool light)
-    {
-        this.damage = damage;
-        this.armourPen = armourPen;
-        this.light = light;
-    }
+    [field: SerializeField] public byte damage {  get; private set; }
+    [field: SerializeField] public byte armourPen {  get; private set; }
+    [field: SerializeField] public bool light {  get; private set; }
 }

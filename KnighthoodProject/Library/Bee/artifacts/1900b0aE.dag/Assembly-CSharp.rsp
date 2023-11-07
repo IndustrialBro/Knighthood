@@ -371,7 +371,7 @@
 "Assets/Scripts/UI/Settings.cs"
 "Assets/Scripts/Weapons/Attack.cs"
 "Assets/Scripts/Weapons/HostileWeapon.cs"
-"Assets/Scripts/Weapons/Player/LongSword.cs"
+"Assets/Scripts/Weapons/Player/LongSword/LongSword.cs"
 "Assets/Scripts/Weapons/PlayerWeapon.cs"
 "Assets/Scripts/Weapons/Weapon.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
