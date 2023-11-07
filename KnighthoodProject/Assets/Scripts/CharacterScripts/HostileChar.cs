@@ -3,17 +3,29 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class HostileChar : Character
+public class HostileChar : MonoBehaviour, Ihad
 {
-    protected override void Die()
+    [field: SerializeField]public short maxHealth { get ; set ; }
+    public short currHealth { get ; set ; }
+    [field: SerializeField]public short armour { get ; set ; }
+    public float blockCost { get ; set ; }
+    public bool isBlocking { get ; set ; }
+
+    public void Die()
     {
-        //Pøehraje animaci smrti a pak zmizí
-        Debug.Log("Dummy is dead. No big surprise.");
-        health = 10;
+        //Pøehraje animaci smrti a zmizí
     }
 
-    protected override void SetTag()
+    public void GetHit(Attack strike)
     {
-        tag = "Hostile";
+        if(strike.armourPen >= armour)
+        {
+            currHealth -= strike.damage;
+
+            if(currHealth <= 0)
+            {
+                Die();
+            }
+        }
     }
 }

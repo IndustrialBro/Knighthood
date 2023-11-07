@@ -42,10 +42,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8732818285764956950}
   - component: {fileID: 8732818285764956949}
-  - component: {fileID: 729967170}
+  - component: {fileID: 8628613986868703965}
   m_Layer: 0
   m_Name: Dummy
-  m_TagString: Untagged
+  m_TagString: Hostile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &729967170
+--- !u!114 &8628613986868703965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,13 +89,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8732818285764956951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 304d8ebf1928ae345ba813ad42c37218, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d16855f71f4d034ca845919315109ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  armour: 0
-  isBlocking: 0
-  blockCost: 0
 --- !u!1 &8732818285980087238
 GameObject:
   m_ObjectHideFlags: 0

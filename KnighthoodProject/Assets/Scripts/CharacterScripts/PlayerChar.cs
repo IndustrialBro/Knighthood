@@ -2,32 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerChar : Character
+public class PlayerChar : MonoBehaviour, Ihad
 {
     [SerializeField]
     GameObject DeathScreen;
+    PlayerUI menu;
     PlayerMovementWPrebuilt pm;
+    [field: SerializeField] public short maxHealth { get; set; }
+    public short currHealth { get; set; }
+    [field: SerializeField] public short armour { get; set; }
+    public float blockCost { get; set; }
+    public bool isBlocking { get; set; } = false;
 
-    protected override void Die()
+    private void Start()
     {
-        //Ohlásí, že hráè zemøel a dá mu možnost vrátit se do lobby nebo ukonèit hru
-        Time.timeScale = 0;
-        DeathScreen.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
+        pm = GetComponent<PlayerMovementWPrebuilt>();
+        menu = GetComponent<PlayerUI>();
+        currHealth = maxHealth;
     }
-    public override void GetHit(Attack strike) 
+    public void Die()
     {
-        if (strike.armourPen > armour && (!isBlocking || pm.currStamina <= 0))
-        {
-            TakeDamage(strike.damage);
-        }
-        else if(isBlocking)
+        menu.OpenOrCloseMenu(DeathScreen);
+    }
+
+    public void GetHit(Attack strike)
+    {
+        if (isBlocking && pm.currStamina > 0)
         {
             pm.currStamina -= blockCost;
         }
-    }
-    protected override void SetTag()
-    {
-        tag = "Player";
+        else
+        {
+            if (strike.armourPen >= armour)
+            {
+                currHealth -= strike.damage;
+
+                if (currHealth <= 0)
+                {
+                    Die();
+                }
+            }
+        }
     }
 }

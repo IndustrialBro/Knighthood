@@ -31,6 +31,10 @@ public abstract class PlayerWeapon : Weapon
         {
             Block();
         }
+        else if (Input.GetButtonUp("Fire2"))
+        {
+            Unblock();
+        }
     }
 
     protected override void SetTargetTag()

@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 960205684}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,11 +567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8aa0e7179ab10641b3dfd32e88370d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  armour: 10
-  isBlocking: 0
-  blockCost: 0
   DeathScreen: {fileID: 8821512809264241559}
+  <maxHealth>k__BackingField: 100
+  <armour>k__BackingField: 10
 --- !u!143 &8821512808120033079
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2303,7 +2301,7 @@ PrefabInstance:
     - target: {fileID: 887973643236177751, guid: d670d5cfd2d90384394460fe43bdb953,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 887973643251734344, guid: d670d5cfd2d90384394460fe43bdb953,
         type: 3}
@@ -2318,7 +2316,7 @@ PrefabInstance:
     - target: {fileID: 887973643306860293, guid: d670d5cfd2d90384394460fe43bdb953,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 887973643306860295, guid: d670d5cfd2d90384394460fe43bdb953,
         type: 3}

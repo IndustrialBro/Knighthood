@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\UI\Settings.cs" />
     <Compile Include="Assets\Scripts\PlayerControls\PlayerMovementWPrebuilt.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\CharacterScripts\Ihad.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\PlayerChar.cs" />
     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Scripts\Weapons\Player\LongSword.cs" />
     <Compile Include="Assets\Scripts\Weapons\Attack.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
+    <Compile Include="Assets\Scripts\Hostile Scripts\Dummy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

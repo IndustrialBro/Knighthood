@@ -7,14 +7,8 @@ public abstract class Character : MonoBehaviour
 {
     [SerializeField]
     protected short health, armour;
-    
     public bool isBlocking;
     public float blockCost;
-
-    protected void Start()
-    {
-        SetTag();
-    }
 
     protected void TakeDamage(short howMuch)
     {
@@ -32,5 +26,4 @@ public abstract class Character : MonoBehaviour
             TakeDamage(strike.damage);
         }
     }
-    protected abstract void SetTag();
 }

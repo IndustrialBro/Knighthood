@@ -27,14 +27,14 @@ public abstract class Weapon : MonoBehaviour
     int isHeavyHash = Animator.StringToHash("IsHeavy"), attCountHash = Animator.StringToHash("AttCount"), strikeHash = Animator.StringToHash("Strike");
 
     //Blokování
-    protected Character dude;
+    protected Ihad dude;
     [SerializeField]
     float blockCost;
 
     protected void Start()
     {
         CreateAttacks();
-        dude = GetComponentInParent<Character>();
+        dude = GetComponentInParent<Ihad>();
         dude.blockCost = blockCost;
         anim = GetComponentInParent<Animator>();
         anim.runtimeAnimatorController = animCon;
@@ -74,7 +74,7 @@ public abstract class Weapon : MonoBehaviour
     {
         if (attacking && other.tag == targetTag)
         {
-            other.GetComponent<Character>().GetHit(currAtt);
+            other.GetComponent<Ihad>().GetHit(currAtt);
         }
     }
 
@@ -121,5 +121,11 @@ public abstract class Weapon : MonoBehaviour
     {
         attackQueue.Clear();
         dude.isBlocking = true;
+        anim.SetBool("Blocking", true);
+    }
+    protected void Unblock()
+    {
+        dude.isBlocking = false;
+        anim.SetBool("Blocking", false);
     }
 }
