@@ -4,10 +4,8 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-    [SerializeField]
-    public RuntimeAnimatorController animCon;
-    Animator anim;
-    
+    protected Animator anim;
+
     protected Queue<Attack> attackQueue = new Queue<Attack>();
     [SerializeField]
     protected Attack lightAttack, heavyAttack;
@@ -31,22 +29,13 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     float blockCost;
 
-    protected void Start()
+    protected virtual void Start()
     {
         dude = GetComponentInParent<Ihad>();
         dude.blockCost = blockCost;
-        anim = GetComponentInParent<Animator>();
-        anim.runtimeAnimatorController = animCon;
+        SetUpAnimator();
         SetTargetTag();
     }
-
-    protected void Update()
-    {
-        ProcessInputs();
-        MoveThroughQueue();
-    }
-
-    protected abstract void ProcessInputs(); //Zaøídí tøídy PlayerWeapon a HostileWeapon nebo jak je pojmenuju
     protected void MoveThroughQueue()
     {
         if(attackQueue.Count > 0 && attReady)
@@ -126,4 +115,5 @@ public abstract class Weapon : MonoBehaviour
         dude.isBlocking = false;
         anim.SetBool("Blocking", false);
     }
+    protected abstract void SetUpAnimator();
 }

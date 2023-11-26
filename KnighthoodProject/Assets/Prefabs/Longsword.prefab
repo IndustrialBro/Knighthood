@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6341645884255127362}
   - component: {fileID: 6341645884255127361}
   - component: {fileID: -2181288070387340678}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Longsword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6341645885788432826}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,6 +181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LongSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 690ecb91a8eb66b48a6e9e177d15c988,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 690ecb91a8eb66b48a6e9e177d15c988, type: 3}
