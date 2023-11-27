@@ -6,8 +6,11 @@ using UnityEngine;
 public abstract class HostileWeapon : Weapon
 {
     [SerializeField]
-    RuntimeAnimatorController idleCon, chaseCon, egageCon;
-    
+    public RuntimeAnimatorController idleCon { get; private set;}
+    [SerializeField]
+    public RuntimeAnimatorController chaseCon { get; private set;}
+    [SerializeField]
+    public RuntimeAnimatorController engageCon { get; private set;}
     [SerializeField]
     float engagementRange;
 

@@ -7,6 +7,11 @@ public class HostileIdleState : HostileState
 {
     public override void SetUpState(GameObject gameObject)
     {
-
+        base.SetUpState(gameObject);
+    }
+    public override void EnterState()
+    {
+        base.EnterState();
+        anim.runtimeAnimatorController = weap.idleCon;
     }
 }
