@@ -6,13 +6,14 @@ using UnityEngine;
 public abstract class HostileWeapon : Weapon
 {
     [SerializeField]
-    public RuntimeAnimatorController idleCon { get; private set;}
+    protected RuntimeAnimatorController idleCon;
+    public RuntimeAnimatorController IdleCon { get { return idleCon; } private set { } }
     [SerializeField]
-    public RuntimeAnimatorController chaseCon { get; private set;}
+    protected RuntimeAnimatorController chaseCon;
+    public RuntimeAnimatorController ChaseCon { get {return chaseCon;} private set { } }
     [SerializeField]
-    public RuntimeAnimatorController engageCon { get; private set;}
-    [SerializeField]
-    float engagementRange;
+    protected RuntimeAnimatorController engageCon;
+    public RuntimeAnimatorController EngageCon { get { return engageCon; } private set { } }
 
     protected override void Start()
     {

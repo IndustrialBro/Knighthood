@@ -12,7 +12,7 @@ public class HostileChasingState : HostileState
     public override void EnterState()
     {
         agent.isStopped = false;
-        anim.runtimeAnimatorController = weap.engageCon;
+        anim.runtimeAnimatorController = weap.ChaseCon;
     }
     public override void ExitState()
     {
@@ -25,7 +25,6 @@ public class HostileChasingState : HostileState
     public override void FixedUpdate()
     {
         agent.SetDestination(GameManager.Instance.playerTransform.position);
-        anim.runtimeAnimatorController = weap.chaseCon;
     }
     public override void SetUpState(GameObject gameObject)
     {

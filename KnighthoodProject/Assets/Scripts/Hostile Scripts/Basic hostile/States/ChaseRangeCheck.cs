@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChaseRangeCheck : MonoBehaviour
 {
+
     Enemy enemyScript;
     HostileStateManager stateMachine;
     private void Start()
@@ -11,6 +12,7 @@ public class ChaseRangeCheck : MonoBehaviour
         enemyScript = GetComponentInParent<Enemy>();
 
         stateMachine = enemyScript.stateMachine;
+        
     }
 
     private void OnTriggerEnter(Collider other)

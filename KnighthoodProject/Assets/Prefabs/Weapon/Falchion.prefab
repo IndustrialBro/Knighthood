@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 744134816306351898}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 744134817247364130}
   - component: {fileID: 744134817247364133}
   - component: {fileID: 4622381894830315397}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Falchion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,8 +115,7 @@ MonoBehaviour:
   blockCost: 0
   idleCon: {fileID: 9100000, guid: 4d4cff38834f20b4085bc07d8fea55f7, type: 2}
   chaseCon: {fileID: 9100000, guid: fae7341dc9d9f99469143641e6779175, type: 2}
-  egageCon: {fileID: 9100000, guid: 18e3c9a01b365444f8ea0ee27be1ffe0, type: 2}
-  engagementRange: 2
+  engageCon: {fileID: 9100000, guid: 18e3c9a01b365444f8ea0ee27be1ffe0, type: 2}
 --- !u!1001 &744134815645318640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -183,6 +182,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Falchion
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fd11e06e358073d4da2f0dcbff2b235f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd11e06e358073d4da2f0dcbff2b235f, type: 3}

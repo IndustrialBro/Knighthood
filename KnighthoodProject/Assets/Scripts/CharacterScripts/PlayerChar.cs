@@ -17,7 +17,7 @@ public class PlayerChar : MonoBehaviour, Ihad
     private void Start()
     {
         pm = GetComponent<PlayerMovementWPrebuilt>();
-        menu = GetComponent<PlayerUI>();
+        menu = GetComponentInChildren<PlayerUI>();
         currHealth = maxHealth;
         GameManager.Instance.SetPlayerTransform(this.transform);
     }
@@ -28,6 +28,7 @@ public class PlayerChar : MonoBehaviour, Ihad
 
     public void GetHit(Attack strike)
     {
+        Debug.Log("hit");
         if (isBlocking && pm.currStamina > 0)
         {
             pm.currStamina -= blockCost;

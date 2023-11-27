@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7584685290783574424}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7584685291561199400}
   - component: {fileID: 7584685291561199401}
   - component: {fileID: 7584685291561199402}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Voulge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,6 +161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Voulge
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f1fb152aee7b5c448a1b608afc41e68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f1fb152aee7b5c448a1b608afc41e68, type: 3}

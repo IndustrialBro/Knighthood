@@ -73,7 +73,6 @@ public abstract class Weapon : MonoBehaviour
         attSpree++;
         anim.SetBool(isHeavyHash, !attack.light);
         anim.SetInteger(attCountHash, attSpree);
-        //anim.SetBool("AAIQ", true); //AAIQ == Are (there) Attacks In Queue (pùvodnì mìl fungovat jinak, ale to nedìlalo co jsem chtìl [ne že by tohle dìlalo])
         anim.SetTrigger(strikeHash);
 
         if (attSpree == maxAttSpree)

@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 1796906790602808529}
   - component: {fileID: 1796906790602808559}
   - component: {fileID: 1796906790602808558}
-  m_Layer: 0
+  - component: {fileID: 2131342801}
+  - component: {fileID: 2131342802}
+  m_Layer: 3
   m_Name: DoubleBladedSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,8 +63,41 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19586065, y: 2.8692713, z: 0.27345318}
-  m_Center: {x: -0.007053837, y: 0.39854288, z: -0.0035269558}
+  m_Size: {x: 0.19586065, y: 1.0136625, z: 0.27345318}
+  m_Center: {x: -0.007053707, y: -0.529261, z: -0.0035267826}
+--- !u!65 &2131342801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796906790602808528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15354812, y: 0.95768917, z: 0.20886257}
+  m_Center: {x: 0.0038740318, y: 1.341267, z: -0.00005426842}
+--- !u!114 &2131342802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796906790602808528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f572904c67235047b04452026ef44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAttack: {fileID: 11400000, guid: 3c5583ed844c1284ead85f8f04838354, type: 2}
+  heavyAttack: {fileID: 11400000, guid: e4bbe607ff9630c4c85fee179e450cf8, type: 2}
+  maxAttSpree: 1
+  resetSpreeTimer: 1.2
+  blockCost: 0
+  idleCon: {fileID: 9100000, guid: 245f7d937a5f539409b94e87bc78d1ff, type: 2}
+  chaseCon: {fileID: 9100000, guid: 3567973dfeca3e64782da136b831677f, type: 2}
+  engageCon: {fileID: 9100000, guid: 7e078a148cd3131418f3d23dbcd1f84c, type: 2}
 --- !u!1 &1796906790623563036
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1796906790623563037}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,6 +196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoubleBladeSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 52160021b0dd4b14898ad5b3333d4291,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52160021b0dd4b14898ad5b3333d4291, type: 3}
