@@ -451,11 +451,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeavyHostile
       objectReference: {fileID: 0}
-    - target: {fileID: 5646963145674022143, guid: 0d9774a034b082e498c2bf478db3b5ef,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d9774a034b082e498c2bf478db3b5ef, type: 3}
 --- !u!1001 &6234727473360684372
@@ -469,11 +464,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CannonFodder
-      objectReference: {fileID: 0}
-    - target: {fileID: 6234727474300228396, guid: c9a656116daec3042abadd94b53ad8ec,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6234727474300228397, guid: c9a656116daec3042abadd94b53ad8ec,
         type: 3}

@@ -19,7 +19,7 @@ public abstract class Weapon : MonoBehaviour
     protected int maxAttSpree;
     protected int attSpree = 0;
     [SerializeField]
-    protected float resetSpreeTimer;
+    protected float resetSpreeTimer, attDuration;
     Coroutine AttSpreeResetCoroutine = null;
     Coroutine ResetAttackingCoroutine = null;
     int isHeavyHash = Animator.StringToHash("IsHeavy"), attCountHash = Animator.StringToHash("AttCount"), strikeHash = Animator.StringToHash("Strike");
@@ -84,16 +84,16 @@ public abstract class Weapon : MonoBehaviour
     {
         //float temp = anim.GetNextAnimatorStateInfo(0).length;
         //Debug.Log($"temp == {temp}");
-        float temp = 0.8f;
-        yield return new WaitForSeconds(temp);
+        //float temp = 0.8f;
+        yield return new WaitForSeconds(attDuration);
         attReady = true;
         //anim.SetBool("AAIQ", false);
     }
     protected IEnumerator ResetAttacking() 
     {
         //float temp = anim.GetNextAnimatorStateInfo(0).length;
-        float temp = 0.8f;
-        yield return new WaitForSeconds(temp);
+        //float temp = 0.8f;
+        yield return new WaitForSeconds(attDuration);
         attacking = false;
     }
     protected IEnumerator ResetAttSpree()
@@ -105,7 +105,7 @@ public abstract class Weapon : MonoBehaviour
     protected abstract void SetTargetTag();
     protected void Block()
     {
-        attackQueue.Clear();
+        EmptyQueue();
         dude.isBlocking = true;
         anim.SetBool("Blocking", true);
     }
@@ -115,4 +115,12 @@ public abstract class Weapon : MonoBehaviour
         anim.SetBool("Blocking", false);
     }
     protected abstract void SetUpAnimator();
+    public void EmptyQueue()
+    {
+        attackQueue.Clear();
+        attSpree = 0;
+        attacking = false;
+        if(!(ResetAttackingCoroutine == null))
+            StopCoroutine(ResetAttackingCoroutine);
+    }
 }

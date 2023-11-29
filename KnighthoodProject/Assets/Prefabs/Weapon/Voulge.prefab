@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7584685291561199400}
   - component: {fileID: 7584685291561199401}
   - component: {fileID: 7584685291561199402}
+  - component: {fileID: 4015428115560948387}
   m_Layer: 3
   m_Name: Voulge
   m_TagString: Untagged
@@ -95,6 +96,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4015428115560948387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7584685291561199407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6b3c36e5afc3044ad7fd8520703c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAttack: {fileID: 0}
+  heavyAttack: {fileID: 0}
+  maxAttSpree: 0
+  resetSpreeTimer: 0
+  blockCost: 0
+  idleCon: {fileID: 0}
+  chaseCon: {fileID: 0}
+  engageCon: {fileID: 0}
 --- !u!1001 &7584685290335622481
 PrefabInstance:
   m_ObjectHideFlags: 0

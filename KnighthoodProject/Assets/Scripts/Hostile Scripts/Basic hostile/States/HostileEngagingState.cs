@@ -21,10 +21,15 @@ public class HostileEngagingState : HostileState
 
         hw.AddAtt(false);
     }
+    public override void ExitState()
+    {
+        hw.EmptyQueue();
+    }
     void LookAtPlayer()
     {
         Vector3 targetDir = (go.transform.position - GameManager.Instance.playerTransform.position) * -1;
         Vector3 newDir = Vector3.RotateTowards(go.transform.forward, targetDir, 3.14f, 0);
         go.transform.rotation = Quaternion.LookRotation(newDir);
     }
+
 }

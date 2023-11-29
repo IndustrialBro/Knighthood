@@ -196,9 +196,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 180
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -305,7 +305,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Voulge
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4015428115560948387, guid: afd7d21a11a6b834e9c328be7eac3207, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: afd7d21a11a6b834e9c328be7eac3207, type: 3}
 --- !u!1 &2818193548130991105 stripped
 GameObject:
@@ -329,6 +330,7 @@ MonoBehaviour:
   heavyAttack: {fileID: 11400000, guid: 3310a0f00cf8bce439731817e3593943, type: 2}
   maxAttSpree: 1
   resetSpreeTimer: 1.2
+  attDuration: 0.983
   blockCost: 0
   idleCon: {fileID: 9100000, guid: 269fe4c3a8c71a54eb8c779b229af311, type: 2}
   chaseCon: {fileID: 9100000, guid: 004fd90fe7657a84db3c5ba27366ebd3, type: 2}
