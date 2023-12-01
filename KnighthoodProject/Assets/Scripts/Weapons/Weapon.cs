@@ -10,7 +10,12 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     protected Attack lightAttack, heavyAttack;
     protected Attack currAtt;
-    protected bool attacking = false;
+    protected bool IsAttacking() 
+    { 
+        if(anim != null)
+            return anim.GetCurrentAnimatorStateInfo(0).IsTag("Attacking");
+        return false;
+    }
     protected bool attReady = true;
     protected string targetTag;
 
@@ -21,7 +26,6 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     protected float resetSpreeTimer, attDuration;
     Coroutine AttSpreeResetCoroutine = null;
-    Coroutine ResetAttackingCoroutine = null;
     int isHeavyHash = Animator.StringToHash("IsHeavy"), attCountHash = Animator.StringToHash("AttCount"), strikeHash = Animator.StringToHash("Strike");
 
     //Blokování
@@ -45,21 +49,17 @@ public abstract class Weapon : MonoBehaviour
     }
     protected void ExecuteAttacks(Attack Att)
     {
-        if (ResetAttackingCoroutine != null)
-            StopCoroutine(ResetAttackingCoroutine);
         
         attReady = false;
-        attacking = true;
         currAtt = Att;
         AnimateAttacks(Att);
         StartCoroutine(ResetAttReady());
 
-        ResetAttackingCoroutine = StartCoroutine(ResetAttacking());
     }
 
     protected void OnTriggerEnter(Collider other)
     {
-        if (attacking && other.tag == targetTag)
+        if (IsAttacking() && other.tag == targetTag)
         {
             other.GetComponent<Ihad>().GetHit(currAtt);
         }
@@ -89,13 +89,7 @@ public abstract class Weapon : MonoBehaviour
         attReady = true;
         //anim.SetBool("AAIQ", false);
     }
-    protected IEnumerator ResetAttacking() 
-    {
-        //float temp = anim.GetNextAnimatorStateInfo(0).length;
-        //float temp = 0.8f;
-        yield return new WaitForSeconds(attDuration);
-        attacking = false;
-    }
+    
     protected IEnumerator ResetAttSpree()
     {
         yield return new WaitForSeconds(resetSpreeTimer);
@@ -119,8 +113,5 @@ public abstract class Weapon : MonoBehaviour
     {
         attackQueue.Clear();
         attSpree = 0;
-        attacking = false;
-        if(!(ResetAttackingCoroutine == null))
-            StopCoroutine(ResetAttackingCoroutine);
     }
 }

@@ -842,6 +842,11 @@ PrefabInstance:
       propertyPath: attDuration
       value: 0.983
       objectReference: {fileID: 0}
+    - target: {fileID: 4622381894830315397, guid: c4f26d51b1ec3fb4aab00d26c588e344,
+        type: 3}
+      propertyPath: maxAttSpree
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4f26d51b1ec3fb4aab00d26c588e344, type: 3}
 --- !u!4 &6689394892908866060 stripped
