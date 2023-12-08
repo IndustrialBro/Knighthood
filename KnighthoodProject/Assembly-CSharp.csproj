@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileIdleState.cs" />
     <Compile Include="Assets\Scripts\Weapons\Attack.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Player\WarHammer\Warhammer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
