@@ -5,7 +5,8 @@ using UnityEngine;
 public class EquipmentManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject armament;
+    GameObject chosenArmament;
+    GameObject currArmament = null;
     [SerializeField]
     Transform weaponSlot;
     void Start()
@@ -13,8 +14,18 @@ public class EquipmentManager : MonoBehaviour
         EquipWeapon();
     }
 
-    protected void EquipWeapon()
+    void EquipWeapon()
     {
-        Instantiate(armament).transform.SetParent(weaponSlot, false);
+        if(currArmament != null)
+            Destroy(currArmament);
+
+        currArmament = Instantiate(chosenArmament);
+        currArmament.transform.SetParent(weaponSlot, false);
+    }
+    public void ChangeWeaponChoice(GameObject weapon)
+    {
+        chosenArmament = weapon;
+        EquipWeapon();
+        Debug.Log("Chose new weapon!");
     }
 }

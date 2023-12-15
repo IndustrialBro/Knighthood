@@ -29,8 +29,8 @@ public class Enemy : MonoBehaviour, Ihad
     {
         if (strike.armourPen >= armour)
         {
-            currHealth -= strike.damage;
-
+            currHealth -= (short)Mathf.Abs(strike.damage - armour);
+       
             if (currHealth <= 0)
                 Die();
         }
