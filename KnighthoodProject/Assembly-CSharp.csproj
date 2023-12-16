@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Weapons\Player\WarHammer\Warhammer.cs" />
     <Compile Include="Assets\Scripts\Weapons\HostileWeapon.cs" />
     <Compile Include="Assets\Scripts\UI\Settings.cs" />
+    <Compile Include="Assets\Scripts\PlayerControls\Interactor.cs" />
     <Compile Include="Assets\Scripts\Weapons\Hostiles\DBsword\DBsword.cs" />
     <Compile Include="Assets\Scripts\PlayerControls\PlayerMovementWPrebuilt.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
@@ -88,7 +89,6 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileIdleState.cs" />
     <Compile Include="Assets\Scripts\Weapons\Attack.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerControls\Interactor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

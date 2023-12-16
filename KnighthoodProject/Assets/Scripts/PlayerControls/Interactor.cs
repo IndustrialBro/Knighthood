@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,18 +17,19 @@ public class Interactor : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact"))
             {
-                Debug.Log("Interactor is interacting");
-                try
+                Debug.Log("Interactor is atempting to interact");
+
+                IInteractable temp = hit.collider.gameObject.GetComponent<IInteractable>();
+                if (temp != null)
                 {
-                    hit.collider.gameObject.GetComponent<IInteractable>().Interact(gameObject);
-                }
-                catch
-                {
-                    hit.collider.gameObject.GetComponentInParent<IInteractable>().Interact(gameObject);
-                }
-                finally
-                {
-                    Debug.Log("Cannot interact.");
+                    try
+                    {
+                        temp.Interact(gameObject);
+                    }
+                    catch
+                    {
+                        temp.Interact(gameObject);
+                    }
                 }
             }
         }
