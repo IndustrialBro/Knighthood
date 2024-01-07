@@ -866,6 +866,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2131342802, guid: c4e41db0985c2f042b47102b8667be55, type: 3}
+      propertyPath: animCon
+      value: 
+      objectReference: {fileID: 9100000, guid: bc5986bd681e2c6468df68eb541e8c76, type: 2}
+    - target: {fileID: 2131342802, guid: c4e41db0985c2f042b47102b8667be55, type: 3}
       propertyPath: attDuration
       value: 0.983
       objectReference: {fileID: 0}

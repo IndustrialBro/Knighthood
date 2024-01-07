@@ -5,23 +5,19 @@ using UnityEngine;
 public class EngageRangeCheck : MonoBehaviour
 {
     Enemy enemyScript;
-    HostileStateManager stateMachine;
     void Start()
     {
         enemyScript = GetComponentInParent<Enemy>();
-
-        stateMachine = enemyScript.stateMachine;
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
-            stateMachine.ChangeState(enemyScript.EngagingState);
+            enemyScript.BeginEnagagement();
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Player")
-            stateMachine.ChangeState(enemyScript.ChasingState);
+        if (other.tag == "Player")
+            enemyScript.BeginChase();
     }
 }

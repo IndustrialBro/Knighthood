@@ -175,7 +175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5646963145674022143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.09, y: 0.68, z: 2.31}
+  m_LocalPosition: {x: 14.249238, y: 1.4, z: 12.057081}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -223,7 +223,7 @@ MonoBehaviour:
   <armour>k__BackingField: 20
   idleState: {fileID: 11400000, guid: 6abef44ce2b1fb147a7358c687a09008, type: 2}
   chasingState: {fileID: 11400000, guid: b369a0427561397429a69c5b91795d06, type: 2}
-  engagingState: {fileID: 11400000, guid: 245441b15100e1248835f72c02696f66, type: 2}
+  engagingState: {fileID: 11400000, guid: 424681b9b6a56ed48a9314509dd9daab, type: 2}
 --- !u!136 &5646963145674022115
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -326,15 +326,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6b3c36e5afc3044ad7fd8520703c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animCon: {fileID: 9100000, guid: 93be2d1b32417fa4eb15a94ca18da0d5, type: 2}
   lightAttack: {fileID: 11400000, guid: d26ab59b56b7cba4ca02838eb2138bbb, type: 2}
   heavyAttack: {fileID: 11400000, guid: 3310a0f00cf8bce439731817e3593943, type: 2}
   maxAttSpree: 1
   resetSpreeTimer: 1.2
   attDuration: 0.983
   blockCost: 0
-  idleCon: {fileID: 9100000, guid: 269fe4c3a8c71a54eb8c779b229af311, type: 2}
-  chaseCon: {fileID: 9100000, guid: 004fd90fe7657a84db3c5ba27366ebd3, type: 2}
-  engageCon: {fileID: 9100000, guid: 89df51d534a61674f8ea72bc8c556a7b, type: 2}
 --- !u!4 &2818193548130991110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7584685291561199400, guid: afd7d21a11a6b834e9c328be7eac3207,

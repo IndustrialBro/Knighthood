@@ -5,15 +5,24 @@ using UnityEngine;
 public abstract class Weapon : MonoBehaviour
 {
     protected Animator anim;
+    [SerializeField]
+    public RuntimeAnimatorController animCon;
+
 
     protected Queue<Attack> attackQueue = new Queue<Attack>();
     [SerializeField]
     protected Attack lightAttack, heavyAttack;
     protected Attack currAtt;
-    protected bool IsAttacking() 
-    { 
-        if(anim != null)
+    bool IsAttacking() 
+    {
+        if (anim != null)
             return anim.GetCurrentAnimatorStateInfo(0).IsTag("Attacking");
+        return false;
+    }
+    public bool ReadyToStrike()
+    {
+        if(anim != null)
+            return IsAttacking() || anim.GetCurrentAnimatorStateInfo(0).IsTag("Preparing");
         return false;
     }
     protected bool attReady = true;
@@ -49,12 +58,10 @@ public abstract class Weapon : MonoBehaviour
     }
     protected void ExecuteAttacks(Attack Att)
     {
-        
         attReady = false;
         currAtt = Att;
         AnimateAttacks(Att);
         StartCoroutine(ResetAttReady());
-
     }
 
     protected void OnTriggerEnter(Collider other)
@@ -108,7 +115,11 @@ public abstract class Weapon : MonoBehaviour
         dude.isBlocking = false;
         anim.SetBool("Blocking", false);
     }
-    protected abstract void SetUpAnimator();
+    protected void SetUpAnimator()
+    {
+        anim = GetComponentInParent<Animator>();
+        anim.runtimeAnimatorController = animCon;
+    }
     public void EmptyQueue()
     {
         attackQueue.Clear();

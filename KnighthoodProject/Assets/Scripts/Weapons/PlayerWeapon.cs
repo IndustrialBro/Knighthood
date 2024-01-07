@@ -4,8 +4,7 @@ using UnityEngine;
 
 public abstract class PlayerWeapon : Weapon
 {
-    [SerializeField]
-    public RuntimeAnimatorController animCon;
+    
     [SerializeField]
     protected float heavyAttTimer; //Pokud mouseDownTime >= heavyAttTimer tak se pøidá do fronty tìžký útok, jinak se pøidá lehký
     protected float mouseDownTime = 0;
@@ -47,10 +46,5 @@ public abstract class PlayerWeapon : Weapon
     protected override void SetTargetTag()
     {
         targetTag = "Hostile";
-    }
-    protected override void SetUpAnimator()
-    {
-        anim = GetComponentInParent<Animator>();
-        anim.runtimeAnimatorController = animCon;
     }
 }

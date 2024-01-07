@@ -6,11 +6,11 @@ using UnityEngine;
 public abstract class Character : MonoBehaviour
 {
     [SerializeField]
-    protected short health, armour;
+    protected int health, armour;
     public bool isBlocking;
     public float blockCost;
 
-    protected void TakeDamage(short howMuch)
+    protected void TakeDamage(int howMuch)
     {
         health -= howMuch;
         if(health <= 0)

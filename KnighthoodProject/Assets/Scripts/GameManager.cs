@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager
+public sealed class GameManager
 {
     private static GameManager instance = new GameManager();
     public static GameManager Instance {  get { return instance; } }

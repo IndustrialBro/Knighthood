@@ -7,6 +7,7 @@ public abstract class HostileState : ScriptableObject
     protected Animator anim;
     protected HostileWeapon weap;
     protected GameObject go;
+    protected HostileStateManager mother;
     public virtual void EnterState() { }
     public virtual void ExitState() { }
     public virtual void Update() { }
@@ -17,5 +18,6 @@ public abstract class HostileState : ScriptableObject
         go = gameObject;
         weap = go.GetComponentInChildren<HostileWeapon>();
         anim = go.GetComponentInChildren<Animator>();
+        mother = go.GetComponent<Enemy>().stateMachine;
     }
 }

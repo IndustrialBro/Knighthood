@@ -81,7 +81,6 @@
     <Compile Include="Assets\Scripts\PlayerControls\PlayerLookAround.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileStateManager.cs" />
-    <Compile Include="Assets\Scripts\CharacterScripts\HostileChar.cs" />
     <Compile Include="Assets\Scripts\MapContent\WeaponSwap.cs" />
     <Compile Include="Assets\Scripts\Weapons\Hostiles\Voulge\Voulge.cs" />
     <Compile Include="Assets\Scripts\MapContent\IInteractable.cs" />
@@ -89,6 +88,9 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileIdleState.cs" />
     <Compile Include="Assets\Scripts\Weapons\Attack.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
+    <Compile Include="Assets\Scripts\MapContent\LevelSwitch.cs" />
+    <Compile Include="Assets\Scripts\LevelChanger.cs" />
+    <Compile Include="Assets\Scripts\MapContent\SpawnerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

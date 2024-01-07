@@ -9,10 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1;
     }
-    public void ChangeScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-    }
+    public void ChangeScene(string sceneName) => LevelChanger.Instance.ChangeScene(sceneName);
 
     public void QuitGame()
     {

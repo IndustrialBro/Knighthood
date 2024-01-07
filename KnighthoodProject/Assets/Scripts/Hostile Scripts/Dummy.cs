@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Dummy : MonoBehaviour, Ihad
 {
-    public short maxHealth { get; set; }
-    public short currHealth { get; set; }
-    public short armour { get; set; }
+    public int maxHealth { get; set; }
+    public int armour { get; set; }
     public float blockCost { get; set; }
     public bool isBlocking { get; set; }
 

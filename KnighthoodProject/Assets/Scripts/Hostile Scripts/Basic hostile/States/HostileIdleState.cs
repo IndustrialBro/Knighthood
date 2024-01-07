@@ -18,8 +18,7 @@ public class HostileIdleState : HostileState
     }
     public override void EnterState()
     {
-        base.EnterState();
-        anim.runtimeAnimatorController = weap.IdleCon;
+
     }
     public override void Update()
     {

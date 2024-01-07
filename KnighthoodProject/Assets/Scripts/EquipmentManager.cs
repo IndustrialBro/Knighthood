@@ -11,9 +11,13 @@ public class EquipmentManager : MonoBehaviour
     Transform weaponSlot;
     void Start()
     {
-        EquipWeapon();
+        if (LevelChanger.Instance.lastChosenWeapon != null)
+        {
+            ChangeWeaponChoice(LevelChanger.Instance.lastChosenWeapon);
+        }
+        else
+            EquipWeapon();
     }
-
     void EquipWeapon()
     {
         if(currArmament != null)
@@ -21,6 +25,7 @@ public class EquipmentManager : MonoBehaviour
 
         currArmament = Instantiate(chosenArmament);
         currArmament.transform.SetParent(weaponSlot, false);
+        LevelChanger.Instance.lastChosenWeapon = chosenArmament;
     }
     public void ChangeWeaponChoice(GameObject weapon)
     {

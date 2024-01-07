@@ -8,11 +8,11 @@ public class HostileChasingState : HostileState
 { // Potøebuje navMeshAgent a odkaz na hráèe (který dám do gameMangeru, aby si to nemusel každý nepøítel ukládat u sebe)
 
     public NavMeshAgent agent;
-    
+    int chaseHash = Animator.StringToHash("Chase");
     public override void EnterState()
     {
         agent.isStopped = false;
-        anim.runtimeAnimatorController = weap.ChaseCon;
+        anim.SetTrigger(chaseHash);
     }
     public override void ExitState()
     {

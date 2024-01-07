@@ -28,7 +28,7 @@ public class Interactor : MonoBehaviour
                     }
                     catch
                     {
-                        temp.Interact(gameObject);
+                        Debug.LogError("Failed to interact");
                     }
                 }
             }

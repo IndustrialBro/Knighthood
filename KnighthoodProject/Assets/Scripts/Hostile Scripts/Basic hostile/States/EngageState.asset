@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dc777f96377a6468fdcee5724b7853, type: 3}
   m_Name: EngageState
   m_EditorClassIdentifier: 
+  maxComboCount: 2
+  maxComboCool: 3
+  heavyAttChance: 0

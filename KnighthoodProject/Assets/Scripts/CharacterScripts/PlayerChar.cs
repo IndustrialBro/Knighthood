@@ -8,9 +8,9 @@ public class PlayerChar : MonoBehaviour, Ihad
     GameObject DeathScreen;
     PlayerUI menu;
     PlayerMovementWPrebuilt pm;
-    [field: SerializeField] public short maxHealth { get; set; }
-    public short currHealth { get; set; }
-    [field: SerializeField] public short armour { get; set; }
+    [field: SerializeField] public int maxHealth { get; set; }
+    public int currHealth { get; set; }
+    [field: SerializeField] public int armour { get; set; }
     public float blockCost { get; set; }
     public bool isBlocking { get; set; } = false;
 

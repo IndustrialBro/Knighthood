@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, Ihad
 {
-    [field: SerializeField] public short maxHealth { get; set; }
-    public short currHealth { get; set; }
-    [field: SerializeField] public short armour { get; set; }
+    [field: SerializeField] public int maxHealth { get; set; }
+    int currHealth { get; set; }
+    [field: SerializeField] public int armour { get; set; }
     public float blockCost { get; set; }
     public bool isBlocking { get; set; }
 
@@ -17,9 +17,9 @@ public class Enemy : MonoBehaviour, Ihad
     [SerializeField] HostileChasingState chasingState;
     [SerializeField] HostileEngagingState engagingState;
 
-    public HostileIdleState IdleState { get; private set; }
-    public HostileChasingState ChasingState { get; private set; }
-    public HostileEngagingState EngagingState { get; private set; }
+    HostileIdleState IdleState;
+    HostileChasingState ChasingState;
+    HostileEngagingState EngagingState;
     public void Die()
     {
         Destroy(gameObject);
@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour, Ihad
     {
         if (strike.armourPen >= armour)
         {
-            currHealth -= (short)Mathf.Abs(strike.damage - armour);
+            currHealth -= strike.damage;
        
             if (currHealth <= 0)
                 Die();
@@ -58,5 +58,13 @@ public class Enemy : MonoBehaviour, Ihad
         IdleState.SetUpState(gameObject);
         ChasingState.SetUpState(gameObject);
         EngagingState.SetUpState(gameObject);
+    }
+    public void BeginChase()
+    {
+        stateMachine.ChangeState(ChasingState);
+    }
+    public void BeginEnagagement()
+    {
+        stateMachine.ChangeState(EngagingState);
     }
 }

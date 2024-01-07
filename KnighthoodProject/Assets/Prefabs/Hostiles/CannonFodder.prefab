@@ -143,7 +143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6234727474300228396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.84, y: 0.44, z: 6.3}
+  m_LocalPosition: {x: 15.566027, y: 1.4, z: 11.612898}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -837,6 +837,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Falchion
       objectReference: {fileID: 0}
+    - target: {fileID: 4622381894830315397, guid: c4f26d51b1ec3fb4aab00d26c588e344,
+        type: 3}
+      propertyPath: animCon
+      value: 
+      objectReference: {fileID: 9100000, guid: 78f7c9e0a62967d45ac224c20658c23a, type: 2}
     - target: {fileID: 4622381894830315397, guid: c4f26d51b1ec3fb4aab00d26c588e344,
         type: 3}
       propertyPath: attDuration
