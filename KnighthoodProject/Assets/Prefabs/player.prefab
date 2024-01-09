@@ -2221,6 +2221,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 887973641863152731, guid: d670d5cfd2d90384394460fe43bdb953,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LobbyScene
+      objectReference: {fileID: 0}
     - target: {fileID: 887973641887695275, guid: d670d5cfd2d90384394460fe43bdb953,
         type: 3}
       propertyPath: m_Layer
@@ -2410,6 +2415,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 887973642975922866, guid: d670d5cfd2d90384394460fe43bdb953,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LobbyScene
       objectReference: {fileID: 0}
     - target: {fileID: 887973642975922867, guid: d670d5cfd2d90384394460fe43bdb953,
         type: 3}
