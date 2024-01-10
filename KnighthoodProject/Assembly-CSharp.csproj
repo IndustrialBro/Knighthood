@@ -64,7 +64,6 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileChasingState.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileEngagingState.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerUI.cs" />
-    <Compile Include="Assets\Scripts\LevelChanger.cs" />
     <Compile Include="Assets\Scripts\Weapons\Player\WarHammer\Warhammer.cs" />
     <Compile Include="Assets\Scripts\Weapons\HostileWeapon.cs" />
     <Compile Include="Assets\Scripts\UI\Settings.cs" />
@@ -81,6 +80,7 @@
     <Compile Include="Assets\Scripts\CharacterScripts\PlayerChar.cs" />
     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
     <Compile Include="Assets\Scripts\PlayerControls\PlayerLookAround.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\SaveAndLoad.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileStateManager.cs" />
     <Compile Include="Assets\Scripts\MapContent\LevelSwitch.cs" />
@@ -91,7 +91,7 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileIdleState.cs" />
     <Compile Include="Assets\Scripts\Weapons\Attack.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
-    <Compile Include="Assets\Scripts\SaveSystem\SaveAndLoad.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem\ISavable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

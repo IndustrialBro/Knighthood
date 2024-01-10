@@ -9,10 +9,30 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1;
     }
-    public void ChangeScene(string sceneName) => LevelChanger.Instance.ChangeScene(sceneName);
+    public void StartGame()
+    {
+        LoadAll();
+        ChangeScene("LobbyScene");
+    }
+    public static void ChangeScene(string sceneName)
+    {
+        if (!string.IsNullOrEmpty(sceneName))
+        {
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+            if (sceneName == "MainMenu")
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+        }
+        else
+        {
+            Debug.LogError("Invalid Scene Name");
+        }
+    }
 
     public void QuitGame()
     {
+        SaveAll();
         Application.Quit();
     }
 
@@ -34,5 +54,13 @@ public class MainMenu : MonoBehaviour
     public void OpenOrCloseWindow(GameObject window)
     {
         window.SetActive(!window.activeSelf);
+    }
+    protected void SaveAll()
+    {
+
+    }
+    protected void LoadAll()
+    {
+
     }
 }

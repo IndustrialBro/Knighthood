@@ -7,13 +7,14 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField]
     GameObject chosenArmament;
     GameObject currArmament = null;
+    static GameObject lastChosenWeapon = null;
     [SerializeField]
     Transform weaponSlot;
     void Start()
     {
-        if (LevelChanger.Instance.lastChosenWeapon != null)
+        if (lastChosenWeapon != null)
         {
-            ChangeWeaponChoice(LevelChanger.Instance.lastChosenWeapon);
+            ChangeWeaponChoice(lastChosenWeapon);
         }
         else
             EquipWeapon();
@@ -25,7 +26,7 @@ public class EquipmentManager : MonoBehaviour
 
         currArmament = Instantiate(chosenArmament);
         currArmament.transform.SetParent(weaponSlot, false);
-        LevelChanger.Instance.lastChosenWeapon = chosenArmament;
+        lastChosenWeapon = chosenArmament;
     }
     public void ChangeWeaponChoice(GameObject weapon)
     {

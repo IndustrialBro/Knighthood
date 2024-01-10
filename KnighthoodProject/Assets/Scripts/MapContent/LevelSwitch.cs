@@ -10,6 +10,6 @@ public class LevelSwitch : MonoBehaviour, IInteractable
     public void Interact(GameObject sender)
     {
         Debug.Log(sceneName);
-        LevelChanger.Instance.ChangeScene(sceneName);
+        MainMenu.ChangeScene(sceneName);
     }
 }
