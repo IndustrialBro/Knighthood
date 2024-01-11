@@ -22,14 +22,15 @@ public class Interactor : MonoBehaviour
                 IInteractable temp = hit.collider.gameObject.GetComponent<IInteractable>();
                 if (temp != null)
                 {
-                    try
-                    {
-                        temp.Interact(gameObject);
-                    }
-                    catch
-                    {
-                        Debug.LogError("Failed to interact");
-                    }
+                    //try
+                    //{
+                    //    temp.Interact(gameObject);
+                    //}
+                    //catch
+                    //{
+                    //    Debug.LogError("Failed to interact");
+                    //}
+                    temp.Interact(gameObject);
                 }
             }
         }

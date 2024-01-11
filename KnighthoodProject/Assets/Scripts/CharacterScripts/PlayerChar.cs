@@ -19,7 +19,7 @@ public class PlayerChar : MonoBehaviour, Ihad
         pm = GetComponent<PlayerMovementWPrebuilt>();
         menu = GetComponentInChildren<PlayerUI>();
         currHealth = maxHealth;
-        GameManager.Instance.SetPlayerTransform(this.transform);
+        GameManager.instance.SetPlayerTransform(this.transform);
     }
     public void Die()
     {

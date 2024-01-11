@@ -12,7 +12,7 @@ public sealed class SaveAndLoad
 
     public void SaveObjectAsJson<T>(T obj, string name)
     {
-        string json = JsonConvert.SerializeObject(obj);
+        string json = JsonConvert.SerializeObject(obj, Formatting.None);
 
         PlayerPrefs.SetString(name, json);
     }
@@ -42,7 +42,10 @@ public sealed class SaveAndLoad
     }
     public void AddSavable(ISavable savable)
     {
-        if(!savables.Contains(savable))
+        if (!savables.Contains(savable))
+        {
             savables.Add(savable);
+            Debug.Log("added savable");
+        }
     }
 }

@@ -24,7 +24,7 @@ public class HostileChasingState : HostileState
     }
     public override void FixedUpdate()
     {
-        agent.SetDestination(GameManager.Instance.playerTransform.position);
+        agent.SetDestination(GameManager.instance.playerTransform.position);
     }
     public override void SetUpState(GameObject gameObject)
     {
