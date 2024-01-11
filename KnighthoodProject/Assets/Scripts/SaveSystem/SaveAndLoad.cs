@@ -8,6 +8,7 @@ public sealed class SaveAndLoad
 {
     public static SaveAndLoad instance {  get; private set; } = new SaveAndLoad();
     private SaveAndLoad() { }
+    List<ISavable> savables = new List<ISavable>();
 
     public void SaveObjectAsJson<T>(T obj, string name)
     {
@@ -23,5 +24,25 @@ public sealed class SaveAndLoad
         T obj = JsonConvert.DeserializeObject<T>(json);
         
         return obj;
+    }
+    public void SaveAll()
+    {
+        for (int i = 0; i < savables.Count; i++)
+        {
+            savables[i].Save();
+        }
+    }
+
+    public void LoadAll()
+    {
+        for (int i = 0; i < savables.Count; i++)
+        {
+            savables[i].Load();
+        }
+    }
+    public void AddSavable(ISavable savable)
+    {
+        if(!savables.Contains(savable))
+            savables.Add(savable);
     }
 }

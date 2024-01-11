@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        LoadAll();
+        SaveAndLoad.instance.LoadAll();
         ChangeScene("LobbyScene");
     }
     public static void ChangeScene(string sceneName)
@@ -22,6 +22,7 @@ public class MainMenu : MonoBehaviour
             if (sceneName == "MainMenu")
             {
                 Cursor.lockState = CursorLockMode.None;
+                SaveAndLoad.instance.SaveAll();
             }
         }
         else
@@ -32,7 +33,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        SaveAll();
+        SaveAndLoad.instance.SaveAll();
         Application.Quit();
     }
 
@@ -54,13 +55,5 @@ public class MainMenu : MonoBehaviour
     public void OpenOrCloseWindow(GameObject window)
     {
         window.SetActive(!window.activeSelf);
-    }
-    protected void SaveAll()
-    {
-
-    }
-    protected void LoadAll()
-    {
-
     }
 }
