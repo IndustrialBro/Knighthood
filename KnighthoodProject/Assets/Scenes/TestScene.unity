@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   maxSpawnCool: 5
-  active: 1
+  active: 0
   hostiles:
   - {fileID: 6234727474300228396, guid: c9a656116daec3042abadd94b53ad8ec, type: 3}
   - {fileID: 5646963145674022143, guid: 0d9774a034b082e498c2bf478db3b5ef, type: 3}

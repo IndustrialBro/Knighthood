@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6234727473376957700}
   - component: {fileID: 6234727473376957701}
-  - component: {fileID: 6234727473376957702}
+  - component: {fileID: 6234727473360684376}
   m_Layer: 7
   m_Name: EngageCheck
   m_TagString: Untagged
@@ -46,7 +46,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &6234727473376957702
+--- !u!114 &6234727473360684376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6234727474051155092}
   - component: {fileID: 6234727474051155093}
-  - component: {fileID: 6234727474051155094}
+  - component: {fileID: 6234727473360684375}
   m_Layer: 7
   m_Name: ChaseCheck
   m_TagString: Untagged
@@ -104,7 +104,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &6234727474051155094
+--- !u!114 &6234727473360684375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6234727474300228396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4383569, y: 0, z: 3.6412878}
+  m_LocalPosition: {x: 13.42086, y: 1.4, z: 10.473453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -760,7 +760,7 @@ Animator:
   m_GameObject: {fileID: 6505267465841316481}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78f7c9e0a62967d45ac224c20658c23a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

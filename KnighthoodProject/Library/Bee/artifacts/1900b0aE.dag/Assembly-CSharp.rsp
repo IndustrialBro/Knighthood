@@ -373,6 +373,7 @@
 "Assets/Scripts/Hostile Scripts/Basic hostile/States/HostileState.cs"
 "Assets/Scripts/Hostile Scripts/Basic hostile/States/HostileStateManager.cs"
 "Assets/Scripts/Hostile Scripts/Dummy.cs"
+"Assets/Scripts/Hostile Scripts/Projectile.cs"
 "Assets/Scripts/MapContent/IInteractable.cs"
 "Assets/Scripts/MapContent/LevelSwitch.cs"
 "Assets/Scripts/MapContent/SpawnerScript.cs"
