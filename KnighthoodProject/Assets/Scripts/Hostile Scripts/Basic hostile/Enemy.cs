@@ -12,14 +12,14 @@ public class Enemy : MonoBehaviour, Ihad
 
 
     //Stavy
-    public HostileStateManager stateMachine = new HostileStateManager();
-    [SerializeField] HostileIdleState idleState;
-    [SerializeField] HostileChasingState chasingState;
-    [SerializeField] HostileEngagingState engagingState;
+    public HostileStateManager stateMachine { get; protected set; } = new HostileStateManager();
+    [SerializeField] protected HostileIdleState idleState;
+    [SerializeField] protected HostileChasingState chasingState;
+    [SerializeField] protected HostileEngagingState engagingState;
 
-    HostileIdleState IdleState;
-    HostileChasingState ChasingState;
-    HostileEngagingState EngagingState;
+    protected HostileIdleState IdleState;
+    protected HostileChasingState ChasingState;
+    protected HostileEngagingState EngagingState;
     public void Die()
     {
         Destroy(gameObject);
@@ -35,21 +35,21 @@ public class Enemy : MonoBehaviour, Ihad
                 Die();
         }
     }
-    void Start()
+    protected void Start()
     {
         currHealth = maxHealth;
         SetUpStates();
         stateMachine.ChangeState(IdleState);
     }
-    void Update()
+    protected void Update()
     {
         stateMachine.Update();
     }
-    private void FixedUpdate()
+    protected void FixedUpdate()
     {
         stateMachine.FixedUpdate();
     }
-    void SetUpStates()
+    protected void SetUpStates()
     {
         IdleState = Instantiate(idleState);
         ChasingState = Instantiate(chasingState);

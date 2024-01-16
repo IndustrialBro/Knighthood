@@ -23,15 +23,16 @@ public class Projectile : MonoBehaviour
     {
         Vector3 targetDir = GameManager.instance.playerTransform.position - transform.position;
         Vector3 temp = Vector3.RotateTowards(transform.forward, targetDir, 3.14f, 0);
-        Vector3 newDir = new(temp.x, 0, temp.z);
-        transform.rotation = Quaternion.LookRotation(newDir);
+        //Vector3 newDir = new(temp.x, 0, temp.z);
+        transform.rotation = Quaternion.LookRotation(temp);
     }
     private void OnTriggerEnter(Collider other)
     {
         Ihad h = other.GetComponent<Ihad>();
-        if(h != null)
+        if(h != null && other.tag == "Player")
             h.GetHit(a);
-        Destroy(gameObject);
+        if(other.tag != "Hostile")
+            Destroy(gameObject);
     }
     void FlyAtPlayer()
     {

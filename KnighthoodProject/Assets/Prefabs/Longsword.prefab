@@ -47,13 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d81bf7be3aa4ca46a7c1d2e96887819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animCon: {fileID: 9100000, guid: f3b94bc807f4cb74da4e8947d0d15895, type: 2}
   lightAttack: {fileID: 11400000, guid: 9ec804201576a58479c2fc1ec3984060, type: 2}
   heavyAttack: {fileID: 11400000, guid: 2918ce0bb40e2f243ac00300eecbe561, type: 2}
   maxAttSpree: 2
-  resetSpreeTimer: 1.2
+  resetSpreeTimer: 1.5
   attDuration: 0.817
   blockCost: 0.6
-  animCon: {fileID: 9100000, guid: f3b94bc807f4cb74da4e8947d0d15895, type: 2}
   heavyAttTimer: 0.2
 --- !u!65 &6341645884255127361
 BoxCollider:

@@ -22,10 +22,9 @@ public abstract class Weapon : MonoBehaviour
     public bool ReadyToStrike()
     {
         if(anim != null)
-            return IsAttacking() || anim.GetCurrentAnimatorStateInfo(0).IsTag("Preparing");
+            return !(IsAttacking() || anim.GetCurrentAnimatorStateInfo(0).IsTag("Preparing"));
         return false;
     }
-    protected bool attReady = true;
     protected string targetTag;
 
     //Animace útokù
@@ -33,7 +32,7 @@ public abstract class Weapon : MonoBehaviour
     protected int maxAttSpree;
     protected int attSpree = 0;
     [SerializeField]
-    protected float resetSpreeTimer, attDuration;
+    protected float resetSpreeTimer;
     Coroutine AttSpreeResetCoroutine = null;
     int isHeavyHash = Animator.StringToHash("IsHeavy"), attCountHash = Animator.StringToHash("AttCount"), strikeHash = Animator.StringToHash("Strike");
 
@@ -51,17 +50,15 @@ public abstract class Weapon : MonoBehaviour
     }
     protected void MoveThroughQueue()
     {
-        if(attackQueue.Count > 0 && attReady)
+        if(attackQueue.Count > 0 && ReadyToStrike())
         {
             ExecuteAttacks(attackQueue.Dequeue());
         }
     }
     protected void ExecuteAttacks(Attack Att)
     {
-        attReady = false;
         currAtt = Att;
         AnimateAttacks(Att);
-        StartCoroutine(ResetAttReady());
     }
 
     protected void OnTriggerEnter(Collider other)
@@ -86,15 +83,6 @@ public abstract class Weapon : MonoBehaviour
             attSpree = 0;
         else
             AttSpreeResetCoroutine = StartCoroutine(ResetAttSpree());
-    }
-    protected IEnumerator ResetAttReady()
-    {
-        //float temp = anim.GetNextAnimatorStateInfo(0).length;
-        //Debug.Log($"temp == {temp}");
-        //float temp = 0.8f;
-        yield return new WaitForSeconds(attDuration);
-        attReady = true;
-        //anim.SetBool("AAIQ", false);
     }
     
     protected IEnumerator ResetAttSpree()
