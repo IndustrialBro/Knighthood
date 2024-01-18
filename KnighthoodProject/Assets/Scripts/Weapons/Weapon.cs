@@ -75,6 +75,7 @@ public abstract class Weapon : MonoBehaviour
             StopCoroutine(AttSpreeResetCoroutine);
 
         attSpree++;
+        Debug.Log($"Spree: {attSpree}");
         anim.SetBool(isHeavyHash, !attack.light);
         anim.SetInteger(attCountHash, attSpree);
         anim.SetTrigger(strikeHash);

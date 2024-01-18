@@ -11,6 +11,7 @@ public abstract class PlayerWeapon : Weapon
 
     protected void Update()
     {
+        Debug.Log($"ready: {anim.GetCurrentAnimatorStateInfo(0).IsTag("Routing")}");
         ProcessInputs();
         MoveThroughQueue();
     }

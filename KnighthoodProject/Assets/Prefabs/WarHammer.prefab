@@ -84,7 +84,6 @@ MonoBehaviour:
   heavyAttack: {fileID: 11400000, guid: f28c24bf686f0614fad8ad7c22b3977a, type: 2}
   maxAttSpree: 2
   resetSpreeTimer: 1.5
-  attDuration: 0.983
   blockCost: 0.3
   heavyAttTimer: 0.2
 --- !u!65 &5316462727830957825
