@@ -13,18 +13,9 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     protected Attack lightAttack, heavyAttack;
     protected Attack currAtt;
-    bool IsAttacking() 
-    {
-        if (anim != null)
-            return anim.GetCurrentAnimatorStateInfo(0).IsTag("Attacking");
-        return false;
-    }
-    public bool ReadyToStrike()
-    {
-        if(anim != null)
-            return !(IsAttacking() || anim.GetCurrentAnimatorStateInfo(0).IsTag("Preparing"));
-        return false;
-    }
+    
+    public bool readyToStrike = true;
+    public bool attacking = false;
     protected string targetTag;
 
     //Animace útokù
@@ -50,7 +41,7 @@ public abstract class Weapon : MonoBehaviour
     }
     protected void MoveThroughQueue()
     {
-        if(attackQueue.Count > 0 && ReadyToStrike())
+        if(attackQueue.Count > 0 && readyToStrike)
         {
             ExecuteAttacks(attackQueue.Dequeue());
         }
@@ -63,7 +54,7 @@ public abstract class Weapon : MonoBehaviour
 
     protected void OnTriggerEnter(Collider other)
     {
-        if (IsAttacking() && other.tag == targetTag)
+        if (attacking && other.tag == targetTag)
         {
             other.GetComponent<Ihad>().GetHit(currAtt);
         }
@@ -113,5 +104,15 @@ public abstract class Weapon : MonoBehaviour
     {
         attackQueue.Clear();
         attSpree = 0;
+    }
+    public void SetReadyToStrike(bool b)
+    {
+        readyToStrike = b;
+        Debug.Log($"Ready: {readyToStrike}");
+    }
+    public void SetAttacking(bool b)
+    {
+        attacking = b;
+        Debug.Log($"Attacking: {attacking}");
     }
 }

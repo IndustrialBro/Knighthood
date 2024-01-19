@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d6a81c4cfbe47468f303e8c650fce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chosenArmament: {fileID: 5316462727830957887, guid: 5153d43d36de0dc4cb6afb34ee72a37d,
+  chosenArmament: {fileID: 6341645884255127375, guid: 157355c52a4f3e145b73c6b719260eca,
     type: 3}
   weaponSlot: {fileID: 8821512808157491843}
 --- !u!114 &104603668
@@ -1956,6 +1956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8821512809630938823}
   - component: {fileID: 666863800}
+  - component: {fileID: 476559924}
   m_Layer: 6
   m_Name: Arms
   m_TagString: Untagged
@@ -2002,6 +2003,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &476559924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821512809630938822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b92535600ea384f85a64fc95b56e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8821512809648572529
 GameObject:
   m_ObjectHideFlags: 0
