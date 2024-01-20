@@ -82,8 +82,10 @@ MonoBehaviour:
   animCon: {fileID: 9100000, guid: 567f6d83f7df7904ca1d961fce587aa7, type: 2}
   lightAttack: {fileID: 11400000, guid: e00ebf36f292e9c43bc21651c8e1aa9b, type: 2}
   heavyAttack: {fileID: 11400000, guid: f28c24bf686f0614fad8ad7c22b3977a, type: 2}
+  readyToStrike: 1
+  attacking: 0
   maxAttSpree: 2
-  resetSpreeTimer: 1.5
+  resetSpreeTimer: 1.2
   blockCost: 0.3
   heavyAttTimer: 0.2
 --- !u!65 &5316462727830957825

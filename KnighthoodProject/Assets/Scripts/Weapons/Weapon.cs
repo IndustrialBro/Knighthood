@@ -15,8 +15,8 @@ public abstract class Weapon : MonoBehaviour
     protected Attack currAtt;
     
     public bool readyToStrike = true;
-    public bool attacking = false;
     protected string targetTag;
+    Collider[] triggers;
 
     //Animace útokù
     [SerializeField]
@@ -34,10 +34,12 @@ public abstract class Weapon : MonoBehaviour
 
     protected virtual void Start()
     {
+        triggers = GetComponents<Collider>();
         dude = GetComponentInParent<Ihad>();
         dude.blockCost = blockCost;
         SetUpAnimator();
         SetTargetTag();
+        SetAttacking(false);
     }
     protected void MoveThroughQueue()
     {
@@ -55,7 +57,7 @@ public abstract class Weapon : MonoBehaviour
 
     protected void OnTriggerEnter(Collider other)
     {
-        if (attacking && other.tag == targetTag)
+        if (other.tag == targetTag)
         {
             other.GetComponent<Ihad>().GetHit(currAtt);
         }
@@ -67,7 +69,6 @@ public abstract class Weapon : MonoBehaviour
             StopCoroutine(AttSpreeResetCoroutine);
 
         attSpree++;
-        Debug.Log($"Spree: {attSpree}");
         anim.SetBool(isHeavyHash, !attack.light);
         anim.SetInteger(attCountHash, attSpree);
         anim.SetTrigger(strikeHash);
@@ -113,7 +114,19 @@ public abstract class Weapon : MonoBehaviour
     }
     public void SetAttacking(bool b)
     {
-        attacking = b;
-        //Debug.Log($"Attacking: {attacking}");
+        if(b)
+        {
+            for(int i = 0 ; i < triggers.Length ; i++)
+            {
+                triggers[i].enabled = true;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < triggers.Length; i++)
+            {
+                triggers[i].enabled = false;
+            }
+        }
     }
 }

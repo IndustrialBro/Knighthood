@@ -63,8 +63,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19586065, y: 1.0136625, z: 0.27345318}
-  m_Center: {x: -0.007053707, y: -0.529261, z: -0.0035267826}
+  m_Size: {x: 0.19586065, y: 1.1644384, z: 0.4}
+  m_Center: {x: -0.007053689, y: -0.6046481, z: -0.0035264187}
 --- !u!65 &2131342801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73,11 +73,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796906790602808528}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15354812, y: 0.95768917, z: 0.20886257}
-  m_Center: {x: 0.0038740318, y: 1.341267, z: -0.00005426842}
+  m_Size: {x: 0.15354812, y: 1.1467409, z: 0.4}
+  m_Center: {x: 0.0038740109, y: 1.4357917, z: -0.000055498895}
 --- !u!114 &2131342802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,14 +90,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f572904c67235047b04452026ef44a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animCon: {fileID: 9100000, guid: bc5986bd681e2c6468df68eb541e8c76, type: 2}
   lightAttack: {fileID: 11400000, guid: 3c5583ed844c1284ead85f8f04838354, type: 2}
   heavyAttack: {fileID: 11400000, guid: e4bbe607ff9630c4c85fee179e450cf8, type: 2}
+  readyToStrike: 1
+  attacking: 0
   maxAttSpree: 1
   resetSpreeTimer: 1.2
   blockCost: 0
-  idleCon: {fileID: 9100000, guid: 245f7d937a5f539409b94e87bc78d1ff, type: 2}
-  chaseCon: {fileID: 9100000, guid: 3567973dfeca3e64782da136b831677f, type: 2}
-  engageCon: {fileID: 9100000, guid: 7e078a148cd3131418f3d23dbcd1f84c, type: 2}
 --- !u!1 &1796906790623563036
 GameObject:
   m_ObjectHideFlags: 0

@@ -873,32 +873,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8954890616960300115}
     m_Modifications:
-    - target: {fileID: 2131342801, guid: c4e41db0985c2f042b47102b8667be55, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2131342802, guid: c4e41db0985c2f042b47102b8667be55, type: 3}
-      propertyPath: animCon
-      value: 
-      objectReference: {fileID: 9100000, guid: bc5986bd681e2c6468df68eb541e8c76, type: 2}
-    - target: {fileID: 2131342802, guid: c4e41db0985c2f042b47102b8667be55, type: 3}
-      propertyPath: attDuration
-      value: 0.983
-      objectReference: {fileID: 0}
-    - target: {fileID: 1454254646695939717, guid: c4e41db0985c2f042b47102b8667be55,
-        type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1796906790602808528, guid: c4e41db0985c2f042b47102b8667be55,
         type: 3}
       propertyPath: m_Name
       value: DoubleBladedSword
-      objectReference: {fileID: 0}
-    - target: {fileID: 1796906790602808528, guid: c4e41db0985c2f042b47102b8667be55,
-        type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1796906790602808529, guid: c4e41db0985c2f042b47102b8667be55,
         type: 3}
@@ -954,11 +932,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1796906790623563036, guid: c4e41db0985c2f042b47102b8667be55,
-        type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4e41db0985c2f042b47102b8667be55, type: 3}
