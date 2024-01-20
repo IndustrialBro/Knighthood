@@ -49,6 +49,7 @@ public abstract class Weapon : MonoBehaviour
     protected void ExecuteAttacks(Attack Att)
     {
         currAtt = Att;
+        SetReadyToStrike(false);
         AnimateAttacks(Att);
     }
 
@@ -108,11 +109,11 @@ public abstract class Weapon : MonoBehaviour
     public void SetReadyToStrike(bool b)
     {
         readyToStrike = b;
-        Debug.Log($"Ready: {readyToStrike}");
+        //Debug.Log($"Ready: {readyToStrike}");
     }
     public void SetAttacking(bool b)
     {
         attacking = b;
-        Debug.Log($"Attacking: {attacking}");
+        //Debug.Log($"Attacking: {attacking}");
     }
 }

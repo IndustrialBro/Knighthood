@@ -35,7 +35,7 @@ public class HostileEngagingState : HostileState
     }
     void LookAtPlayer()
     {
-        if (hw.readyToStrike)
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("CombatStance"))
         {
             Vector3 targetDir = GameManager.instance.playerTransform.position - go.transform.position;
             Vector3 newDir = Vector3.RotateTowards(go.transform.forward, targetDir, 3.14f, 0);

@@ -159,7 +159,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 6c87e6e38dd70de43a649af97a937a37, type: 2}
-  m_Tag: 
+  m_Tag: CombatStance
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 

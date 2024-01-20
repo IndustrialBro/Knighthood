@@ -329,9 +329,10 @@ MonoBehaviour:
   animCon: {fileID: 9100000, guid: 93be2d1b32417fa4eb15a94ca18da0d5, type: 2}
   lightAttack: {fileID: 11400000, guid: d26ab59b56b7cba4ca02838eb2138bbb, type: 2}
   heavyAttack: {fileID: 11400000, guid: 3310a0f00cf8bce439731817e3593943, type: 2}
+  readyToStrike: 1
+  attacking: 0
   maxAttSpree: 1
   resetSpreeTimer: 1.2
-  attDuration: 0.983
   blockCost: 0
 --- !u!4 &2818193548130991110 stripped
 Transform:
@@ -890,6 +891,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1082855457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4800664434559547930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b92535600ea384f85a64fc95b56e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5320073266175778976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5ed4d539164a7c74d8208bfddaa7ad47,
