@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 6234727474300228398}
   - component: {fileID: 6234727474300228399}
   - component: {fileID: 6234727474300228393}
+  - component: {fileID: 2062885510789706599}
   m_Layer: 6
   m_Name: CannonFodder
   m_TagString: Hostile
@@ -187,8 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d4888cad0936847b966532e0c90583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <maxHealth>k__BackingField: 20
-  <armour>k__BackingField: 0
   idleState: {fileID: 11400000, guid: 6abef44ce2b1fb147a7358c687a09008, type: 2}
   chasingState: {fileID: 11400000, guid: b369a0427561397429a69c5b91795d06, type: 2}
   engagingState: {fileID: 11400000, guid: 245441b15100e1248835f72c02696f66, type: 2}
@@ -206,6 +205,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2062885510789706599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6234727474300228396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f59d82a619222a4bbeccd7e92367527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 20
+  armour: 0
+  isblocking: 0
+  blockCost: 0
 --- !u!1 &6234727474750240438
 GameObject:
   m_ObjectHideFlags: 0

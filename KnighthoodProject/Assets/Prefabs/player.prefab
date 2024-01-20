@@ -568,9 +568,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8aa0e7179ab10641b3dfd32e88370d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 100
+  armour: 0
+  isblocking: 0
+  blockCost: 0
   DeathScreen: {fileID: 8821512809264241559}
-  <maxHealth>k__BackingField: 100
-  <armour>k__BackingField: 10
 --- !u!143 &8821512808120033079
 CharacterController:
   m_ObjectHideFlags: 0

@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 5646963145674022113}
   - component: {fileID: 5646963145674022114}
   - component: {fileID: 5646963145674022115}
+  - component: {fileID: 4689697252758530150}
   m_Layer: 6
   m_Name: HeavyHostile
   m_TagString: Hostile
@@ -219,8 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d4888cad0936847b966532e0c90583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <maxHealth>k__BackingField: 50
-  <armour>k__BackingField: 20
   idleState: {fileID: 11400000, guid: 6abef44ce2b1fb147a7358c687a09008, type: 2}
   chasingState: {fileID: 11400000, guid: b369a0427561397429a69c5b91795d06, type: 2}
   engagingState: {fileID: 11400000, guid: 424681b9b6a56ed48a9314509dd9daab, type: 2}
@@ -238,6 +237,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4689697252758530150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646963145674022143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f59d82a619222a4bbeccd7e92367527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 75
+  armour: 20
+  isblocking: 0
+  blockCost: 0
 --- !u!1001 &5646963144372230958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,7 +345,6 @@ MonoBehaviour:
   lightAttack: {fileID: 11400000, guid: d26ab59b56b7cba4ca02838eb2138bbb, type: 2}
   heavyAttack: {fileID: 11400000, guid: 3310a0f00cf8bce439731817e3593943, type: 2}
   readyToStrike: 1
-  attacking: 0
   maxAttSpree: 1
   resetSpreeTimer: 1.2
   blockCost: 0

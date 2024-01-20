@@ -93,6 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d16855f71f4d034ca845919315109ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 10
+  armour: 0
+  isblocking: 0
+  blockCost: 0
 --- !u!208 &203621413
 NavMeshObstacle:
   m_ObjectHideFlags: 0

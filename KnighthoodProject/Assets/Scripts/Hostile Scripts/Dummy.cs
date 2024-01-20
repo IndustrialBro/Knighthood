@@ -2,20 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dummy : MonoBehaviour, Ihad
+public class Dummy : Had
 {
-    public int maxHealth { get; set; }
-    public int armour { get; set; }
-    public float blockCost { get; set; }
-    public bool isBlocking { get; set; }
-
-    public void Die()
+    protected override void Die()
     {
-        Debug.Log("Dummy hit");
-    }
-
-    public void GetHit(Attack strike)
-    {
-        Die();
+        Debug.Log("Dummy hit!");
+        currHealth = MaxHealth;
     }
 }

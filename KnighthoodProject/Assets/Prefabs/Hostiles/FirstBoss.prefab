@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8954890616512323658}
   - component: {fileID: 8954890616512323661}
   - component: {fileID: 8954890616512323659}
+  - component: {fileID: 8851588599848275159}
   m_Layer: 6
   m_Name: FirstBoss
   m_TagString: Hostile
@@ -71,8 +72,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d4888cad0936847b966532e0c90583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <maxHealth>k__BackingField: 120
-  <armour>k__BackingField: 20
   idleState: {fileID: 11400000, guid: 6abef44ce2b1fb147a7358c687a09008, type: 2}
   chasingState: {fileID: 11400000, guid: b369a0427561397429a69c5b91795d06, type: 2}
   engagingState: {fileID: 11400000, guid: 245441b15100e1248835f72c02696f66, type: 2}
@@ -90,6 +89,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &8851588599848275159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8954890616512323663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f59d82a619222a4bbeccd7e92367527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 150
+  armour: 25
+  isblocking: 0
+  blockCost: 0
 --- !u!1 &8954890616949446428
 GameObject:
   m_ObjectHideFlags: 0

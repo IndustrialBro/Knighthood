@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Ihad h = other.GetComponent<Ihad>();
+        Had h = other.GetComponent<Had>();
         if(h != null && other.tag == "Player")
             h.GetHit(a);
         if(other.tag != "Hostile")
