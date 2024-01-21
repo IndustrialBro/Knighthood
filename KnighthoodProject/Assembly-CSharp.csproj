@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\MapContent\SpawnerScript.cs" />
     <Compile Include="Assets\Scripts\PlayerControls\PlayerMovementWPrebuilt.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\HostileHad.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Bosses\SecondBoss\SBarenaChanging.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Bosses\SecondBoss\ArenaMarker.cs" />
     <Compile Include="Assets\Scripts\Weapons\Hostiles\Falchion\Falchion.cs" />
@@ -99,7 +100,6 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Bosses\SecondBoss\SecondBoss.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\Had.cs" />
-    <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\HostileHad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
