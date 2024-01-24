@@ -47,4 +47,8 @@ public class Middleman : MonoBehaviour
 
         w = GetComponentInChildren<Weapon>();
     }
+    public void SetNewWeaponComponent(Weapon newW)
+    {
+        w = newW;
+    }
 }

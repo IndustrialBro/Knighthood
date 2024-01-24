@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660b7a7a7e06b3144ba5adb2bf3893b5, type: 3}
   m_Name: HammerLight
   m_EditorClassIdentifier: 
-  <damage>k__BackingField: 25
-  <armourPen>k__BackingField: 50
+  <damage>k__BackingField: 35
+  <armourPen>k__BackingField: 30
   <light>k__BackingField: 1

@@ -16,12 +16,17 @@ public abstract class Had : MonoBehaviour
     }
     public virtual void GetHit(Attack a)
     {
-        if (a.armourPen > armour)
+        if (armour == 0)
         {
             currHealth -= a.damage;
-            if (currHealth <= 0)
-                Die();
         }
+        else
+        {
+            currHealth -= (a.damage * a.armourPen) / armour;
+        }
+        
+        if (currHealth <= 0)
+            Die();
     }
     protected abstract void Die();
 }

@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 150
-  armour: 25
+  armour: 50
   isblocking: 0
   blockCost: 0
 --- !u!1 &8954890616949446428
