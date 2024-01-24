@@ -6,20 +6,14 @@ public class Enemy : MonoBehaviour
 {
     //Stavy
     public HostileStateManager stateMachine { get; protected set; } = new HostileStateManager();
-    [SerializeField] protected HostileIdleState idleState;
-    [SerializeField] protected HostileChasingState chasingState;
-    [SerializeField] protected HostileEngagingState engagingState;
 
-    protected HostileIdleState IdleState;
-    protected HostileChasingState ChasingState;
-    protected HostileEngagingState EngagingState;
-    
-
+    [SerializeField] protected List<HostileState> HostileStates = new();
+    protected List<HostileState> hs = new();
     
     protected void Start()
     {
         SetUpStates();
-        stateMachine.ChangeState(IdleState);
+        SwitchState(0);
     }
     protected void Update()
     {
@@ -31,20 +25,15 @@ public class Enemy : MonoBehaviour
     }
     protected void SetUpStates()
     {
-        IdleState = Instantiate(idleState);
-        ChasingState = Instantiate(chasingState);
-        EngagingState = Instantiate(engagingState);
-
-        IdleState.SetUpState(gameObject);
-        ChasingState.SetUpState(gameObject);
-        EngagingState.SetUpState(gameObject);
+        for (int i = 0; i < HostileStates.Count; i++)
+        {
+            HostileState temp = Instantiate(HostileStates[i]);
+            temp.SetUpState(gameObject);
+            hs.Add(temp);
+        }
     }
-    public void BeginChase()
+    public void SwitchState(int id)
     {
-        stateMachine.ChangeState(ChasingState);
-    }
-    public void BeginEnagagement()
-    {
-        stateMachine.ChangeState(EngagingState);
+        stateMachine.ChangeState(hs[id]);
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6234727473376957700}
   - component: {fileID: 6234727473376957701}
-  - component: {fileID: 6234727473360684376}
+  - component: {fileID: 500125372}
   m_Layer: 7
   m_Name: EngageCheck
   m_TagString: Untagged
@@ -46,7 +46,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &6234727473360684376
+--- !u!114 &500125372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,9 +55,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6234727473376957723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d4938beeec19a54185d6b7b9fc64ca5, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a465e57e12145b42843788b853b4512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterId: 2
+  exitId: 1
 --- !u!1 &6234727474051155179
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,7 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6234727474051155092}
   - component: {fileID: 6234727474051155093}
-  - component: {fileID: 6234727473360684375}
+  - component: {fileID: 2063555876}
   m_Layer: 7
   m_Name: ChaseCheck
   m_TagString: Untagged
@@ -104,7 +106,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &6234727473360684375
+--- !u!114 &2063555876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,9 +115,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6234727474051155179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317be483b4d8d5143b2cc72c41517221, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a465e57e12145b42843788b853b4512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterId: 1
+  exitId: 0
 --- !u!1 &6234727474300228396
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,9 +192,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d4888cad0936847b966532e0c90583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleState: {fileID: 11400000, guid: 6abef44ce2b1fb147a7358c687a09008, type: 2}
-  chasingState: {fileID: 11400000, guid: b369a0427561397429a69c5b91795d06, type: 2}
-  engagingState: {fileID: 11400000, guid: 245441b15100e1248835f72c02696f66, type: 2}
+  HostileStates:
+  - {fileID: 11400000, guid: 6abef44ce2b1fb147a7358c687a09008, type: 2}
+  - {fileID: 11400000, guid: b369a0427561397429a69c5b91795d06, type: 2}
+  - {fileID: 11400000, guid: 245441b15100e1248835f72c02696f66, type: 2}
 --- !u!136 &6234727474300228393
 CapsuleCollider:
   m_ObjectHideFlags: 0

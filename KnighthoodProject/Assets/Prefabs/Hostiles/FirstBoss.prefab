@@ -72,9 +72,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d4888cad0936847b966532e0c90583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleState: {fileID: 11400000, guid: 6abef44ce2b1fb147a7358c687a09008, type: 2}
-  chasingState: {fileID: 11400000, guid: b369a0427561397429a69c5b91795d06, type: 2}
-  engagingState: {fileID: 11400000, guid: 245441b15100e1248835f72c02696f66, type: 2}
+  HostileStates:
+  - {fileID: 11400000, guid: 6abef44ce2b1fb147a7358c687a09008, type: 2}
+  - {fileID: 11400000, guid: b369a0427561397429a69c5b91795d06, type: 2}
+  - {fileID: 11400000, guid: 245441b15100e1248835f72c02696f66, type: 2}
 --- !u!136 &8954890616512323659
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -115,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8954890616949446429}
   - component: {fileID: 8954890616949446427}
-  - component: {fileID: 8954890616949446426}
+  - component: {fileID: 572367270}
   m_Layer: 7
   m_Name: EngageCheck
   m_TagString: Untagged
@@ -151,7 +152,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.5
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &8954890616949446426
+--- !u!114 &572367270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,9 +161,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8954890616949446428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d4938beeec19a54185d6b7b9fc64ca5, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a465e57e12145b42843788b853b4512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterId: 2
+  exitId: 1
 --- !u!1 &8954890616960300114
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8954890617122633350}
   - component: {fileID: 8954890617122633348}
-  - component: {fileID: 8954890617122633351}
+  - component: {fileID: 115460825}
   m_Layer: 7
   m_Name: ChaseCheck
   m_TagString: Untagged
@@ -241,7 +244,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 10
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &8954890617122633351
+--- !u!114 &115460825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,9 +253,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8954890617122633369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317be483b4d8d5143b2cc72c41517221, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a465e57e12145b42843788b853b4512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterId: 1
+  exitId: 0
 --- !u!1001 &8954890617679577468
 PrefabInstance:
   m_ObjectHideFlags: 0

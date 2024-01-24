@@ -40,6 +40,6 @@ public class SpawnerScript : MonoBehaviour
         g.transform.position = new Vector3(x, transform.position.y, z);
         
         GameObject h = Instantiate(g);
-        h.GetComponent<Enemy>().BeginChase();
+        h.GetComponent<Enemy>().SwitchState(1);
     }
 }
