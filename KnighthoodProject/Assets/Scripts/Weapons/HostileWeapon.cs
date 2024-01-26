@@ -5,11 +5,6 @@ using UnityEngine;
 
 public abstract class HostileWeapon : Weapon
 {
-    protected override void Start()
-    {
-        base.Start();
-        //Pøidej nastavení engagementRange
-    }
     protected void Update()
     {
         MoveThroughQueue();

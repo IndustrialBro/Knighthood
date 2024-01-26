@@ -10,10 +10,8 @@ public class EquipmentManager : MonoBehaviour
     static GameObject lastChosenWeapon = null;
     [SerializeField]
     Transform weaponSlot;
-    Middleman m = null;
     void Start()
     {
-        m = GetComponentInChildren<Middleman>();
         //lastChosenWeapon = SaveAndLoad.instance.LoadObjectFromJson<GameObject>("LastChosenWeapon");
         if (lastChosenWeapon != null)
         {
@@ -30,7 +28,6 @@ public class EquipmentManager : MonoBehaviour
         currArmament = Instantiate(chosenArmament);
         currArmament.transform.SetParent(weaponSlot, false);
         lastChosenWeapon = chosenArmament;
-        m.SetNewWeaponComponent(currArmament.GetComponent<Weapon>());
     }
     public void ChangeWeaponChoice(GameObject weapon)
     {

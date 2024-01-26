@@ -6,11 +6,7 @@ using UnityEngine;
 public class Middleman : MonoBehaviour
 {
     Weapon w;
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(GetWeaponComponent());
-    }
+    
     public void SetReadyToStrike(int i)
     {
         switch (i)
@@ -40,12 +36,6 @@ public class Middleman : MonoBehaviour
                 Debug.LogError($"SetAttack parameter out of bounds in middleman of {gameObject.name}");
                 break;
         }
-    }
-    IEnumerator GetWeaponComponent()
-    {
-        yield return null;
-
-        w = GetComponentInChildren<Weapon>();
     }
     public void SetNewWeaponComponent(Weapon newW)
     {

@@ -40,6 +40,7 @@ public abstract class Weapon : MonoBehaviour
         SetUpAnimator();
         SetTargetTag();
         SetAttacking(false);
+        GetComponentInParent<Middleman>().SetNewWeaponComponent(this);
     }
     protected void MoveThroughQueue()
     {

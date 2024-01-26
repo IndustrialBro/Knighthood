@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 
 public class StateSwitchTrigger : MonoBehaviour
 {
     [SerializeField] int enterId, exitId;
+    [SerializeField] bool switchOnExit = false;
     Enemy e;
     void Start()
     {
@@ -16,7 +18,7 @@ public class StateSwitchTrigger : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if(exitId != 0)
+        if(switchOnExit)
             e.SwitchState(exitId);
     }
 }

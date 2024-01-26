@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enterId: 2
   exitId: 1
+  switchOnExit: 1
 --- !u!1 &6234727474051155179
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enterId: 1
   exitId: 0
+  switchOnExit: 0
 --- !u!1 &6234727474300228396
 GameObject:
   m_ObjectHideFlags: 0
