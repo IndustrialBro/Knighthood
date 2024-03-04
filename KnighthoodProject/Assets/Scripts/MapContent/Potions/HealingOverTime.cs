@@ -16,5 +16,11 @@ public class HealingOverTime : Effect
     {
         h.Heal(health);
         Debug.Log("Get Healed lol");
+        base.DoYourThing();
+    }
+
+    protected override void EndEffect()
+    {
+        Debug.Log("Stopped Healing");
     }
 }

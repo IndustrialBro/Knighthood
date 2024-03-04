@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710980dea73e67a4991b3ce01334f48c, type: 3}
   m_Name: HealingOverTimeEffect
   m_EditorClassIdentifier: 
-  ttl: 6
+  <ttl>k__BackingField: 5
   health: 15

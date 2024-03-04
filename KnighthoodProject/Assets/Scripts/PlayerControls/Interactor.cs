@@ -15,21 +15,13 @@ public class Interactor : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
-            if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit hit, 1))
+            if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit hit, 2.5f))
             {
                 Debug.Log("Interactor is atempting to interact");
 
                 IInteractable temp = hit.collider.gameObject.GetComponent<IInteractable>();
                 if (temp != null)
                 {
-                    //try
-                    //{
-                    //    temp.Interact(gameObject);
-                    //}
-                    //catch
-                    //{
-                    //    Debug.LogError("Failed to interact");
-                    //}
                     temp.Interact(gameObject);
                 }
             }

@@ -24,7 +24,6 @@ public class PotionAffected : MonoBehaviour
                 if (currInterval < 0)
                 {
                     effect.DoYourThing();
-                    effect.ttl--;
                     currInterval = maxInterval;
                 }
                 else

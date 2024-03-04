@@ -4,9 +4,18 @@ using UnityEngine;
 
 public abstract class Effect : ScriptableObject
 {
-    [SerializeField]
-    public int ttl;
+    [field : SerializeField]
+    public int ttl { get; protected set; }
     public abstract void StartEffect(GameObject go);
     
-    public abstract void DoYourThing();
+    public virtual void DoYourThing()
+    {
+        ttl--;
+        if(ttl == 0)
+        {
+            EndEffect();
+        }
+    }
+
+    protected abstract void EndEffect();
 }
