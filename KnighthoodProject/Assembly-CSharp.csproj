@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Weapons\PlayerWeapon.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Dummy.cs" />
+    <Compile Include="Assets\Scripts\MapContent\Potions\Effect.cs" />
+    <Compile Include="Assets\Scripts\MapContent\Potions\InstantHealPotion.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\StateSwitchTrigger.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileChasingState.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Projectile.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="Assets\Scripts\Weapons\HostileWeapon.cs" />
     <Compile Include="Assets\Scripts\UI\Settings.cs" />
     <Compile Include="Assets\Scripts\PlayerControls\Interactor.cs" />
+    <Compile Include="Assets\Scripts\MapContent\Potions\PotionAffected.cs" />
     <Compile Include="Assets\Scripts\Weapons\Hostiles\DBsword\DBsword.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\ISavable.cs" />
     <Compile Include="Assets\Scripts\MapContent\SpawnerScript.cs" />
@@ -84,6 +87,8 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileState.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\PlayerChar.cs" />
     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\MapContent\Potions\HealingOverTime.cs" />
+    <Compile Include="Assets\Scripts\Weapons\RangedWeapon.cs" />
     <Compile Include="Assets\Scripts\PlayerControls\PlayerLookAround.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\SaveAndLoad.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -93,6 +98,7 @@
     <Compile Include="Assets\Scripts\MapContent\WeaponSwap.cs" />
     <Compile Include="Assets\Scripts\Weapons\Hostiles\Voulge\Voulge.cs" />
     <Compile Include="Assets\Scripts\MapContent\IInteractable.cs" />
+    <Compile Include="Assets\Scripts\MapContent\Potions\Potion.cs" />
     <Compile Include="Assets\Scripts\Weapons\Player\LongSword\LongSword.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileIdleState.cs" />
     <Compile Include="Assets\Scripts\Weapons\Attack.cs" />

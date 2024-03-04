@@ -9,7 +9,7 @@ public class SpawnerScript : MonoBehaviour
     float currSpawnCool;
     
     [SerializeField]
-    bool active = false;
+    bool active = false, horde = false;
     
     [SerializeField]
     List<GameObject> hostiles = new List<GameObject>();
@@ -40,6 +40,12 @@ public class SpawnerScript : MonoBehaviour
         g.transform.position = new Vector3(x, transform.position.y, z);
         
         GameObject h = Instantiate(g);
-        h.GetComponent<Enemy>().SwitchState(1);
+        if(horde)
+            StartCoroutine(ChasePlayer(h.GetComponent<Enemy>()));
+    }
+    IEnumerator ChasePlayer(Enemy enemy)
+    {
+        yield return null;
+        enemy.SwitchState(1);
     }
 }

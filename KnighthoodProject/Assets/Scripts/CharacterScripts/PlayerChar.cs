@@ -28,6 +28,14 @@ public class PlayerChar : Had
             pm.currStamina -= blockCost;
         }
         else
+        {
             base.GetHit(a);
+            menu.UpdateHealthBar(MaxHealth, currHealth);
+        }
+    }
+    public override void Heal(int howMuch)
+    {
+        base.Heal(howMuch);
+        menu.UpdateHealthBar(MaxHealth, currHealth);
     }
 }

@@ -9,7 +9,11 @@ public class ArenaMarker : MonoBehaviour
 
     public Transform GetRandomMarker()
     {
-        int i = Random.Range(0, markers.Count);
-        return markers[i];
+        if(markers.Count > 0)
+        {
+            int i = Random.Range(0, markers.Count);
+            return markers[i];
+        }
+        return transform;
     }
 }

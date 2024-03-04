@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SBstate : HostileState
 {
-    Transform palm;
+    protected SecondBoss sb;
     public override void SetUpState(GameObject gameObject)
     {
         go = gameObject;
         anim = go.GetComponentInChildren<Animator>();
         mother = go.GetComponent<Enemy>().stateMachine;
-        palm = go.GetComponent<SecondBoss>().palm;
+        sb = go.GetComponent<SecondBoss>();
     }
 }

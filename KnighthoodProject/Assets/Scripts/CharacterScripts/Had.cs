@@ -28,5 +28,12 @@ public abstract class Had : MonoBehaviour
         if (currHealth <= 0)
             Die();
     }
+    public virtual void Heal(int howMuch)
+    {
+        Debug.Log("Healed");
+        currHealth += howMuch;
+        if(currHealth > MaxHealth)
+            currHealth = MaxHealth;
+    }
     protected abstract void Die();
 }

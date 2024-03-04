@@ -13,9 +13,9 @@ public class Interactor : MonoBehaviour
 
     void Update()
     {
-        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit hit, 1))
+        if (Input.GetButtonDown("Interact"))
         {
-            if (Input.GetButtonDown("Interact"))
+            if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit hit, 1))
             {
                 Debug.Log("Interactor is atempting to interact");
 

@@ -5,14 +5,13 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField]
-    float mps, arcHeight;
+    float mps, trackingCool;
     [SerializeField]
     Attack a;
 
     void Start()
     {
         TurnToPlayer();
-
     }
 
     void Update()
@@ -23,7 +22,6 @@ public class Projectile : MonoBehaviour
     {
         Vector3 targetDir = GameManager.instance.playerTransform.position - transform.position;
         Vector3 temp = Vector3.RotateTowards(transform.forward, targetDir, 3.14f, 0);
-        //Vector3 newDir = new(temp.x, 0, temp.z);
         transform.rotation = Quaternion.LookRotation(temp);
     }
     private void OnTriggerEnter(Collider other)
@@ -36,15 +34,11 @@ public class Projectile : MonoBehaviour
     }
     void FlyAtPlayer()
     {
-        //mertikální vovement : 
-        VerticalMovement();
-
-        //morizontal hovement
+        if(trackingCool > 0)
+        {
+            TurnToPlayer();
+            trackingCool -= Time.deltaTime;
+        }
         transform.position += transform.forward * mps * Time.deltaTime;
-    }
-    void VerticalMovement()
-    {
-        
-
     }
 }
