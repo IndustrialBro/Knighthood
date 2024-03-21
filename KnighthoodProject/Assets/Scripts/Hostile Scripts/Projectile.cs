@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour
     {
         Had h = other.GetComponent<Had>();
         if(h != null && other.tag == "Player")
-            h.GetHit(a);
+            h.GetHit(a, 0);
         if(other.tag != "Hostile")
             Destroy(gameObject);
     }

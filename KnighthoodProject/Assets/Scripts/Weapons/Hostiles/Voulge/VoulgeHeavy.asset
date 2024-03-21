@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: VoulgeHeavy
   m_EditorClassIdentifier: 
   <damage>k__BackingField: 60
-  <armourPen>k__BackingField: 20
+  <armourPen>k__BackingField: 5
   <light>k__BackingField: 0

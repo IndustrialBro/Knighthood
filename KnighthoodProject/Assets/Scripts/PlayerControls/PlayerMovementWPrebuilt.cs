@@ -9,19 +9,20 @@ public class PlayerMovementWPrebuilt : MonoBehaviour
     CharacterController cc;
     [SerializeField]
     float speed;
-    float verMove;
-    float horMove;
-    float yMovement;
+    float verMove, horMove, yMovement, addSpeed = 0;
     
     [Header("Running")]
 
     [SerializeField]
     float runningSpeed;
-    public float currStamina;
+    public float currStamina { get; private set; }
 
     [SerializeField]
     float maxRunningCooldown, maxStamina, staminaRecMod;
     float currRunningCooldown = 0;
+
+    [SerializeField]
+    PlayerUI ui;
 
     [Header("Jumping")]
     [SerializeField]
@@ -54,14 +55,14 @@ public class PlayerMovementWPrebuilt : MonoBehaviour
         Vector3 localMove = new Vector3(horMove, yMovement, verMove);
         Vector3 globalMove = transform.TransformDirection(localMove).normalized;
 
-        cc.Move(globalMove * speed);
+        cc.Move(globalMove * (speed + addSpeed));
         HandleGravity();
         HandleJump();
     }
 
     void ProcessRunning()
     {
-        if (currRunningCooldown <= 0)
+        if (currRunningCooldown < 0)
         {
             if (currStamina > 0 && cc.isGrounded)
             {
@@ -69,7 +70,7 @@ public class PlayerMovementWPrebuilt : MonoBehaviour
                 if (Input.GetButton("Run"))
                 {
                     verMove *= runningSpeed;
-                    currStamina -= Time.deltaTime;
+                    DepleteStamina(1, true);
                 }
             }
             else
@@ -85,8 +86,25 @@ public class PlayerMovementWPrebuilt : MonoBehaviour
         //Stamina recovery
         if (currStamina < maxStamina && !Input.GetButton("Run"))
         {
-            currStamina += Time.deltaTime * staminaRecMod;
+            DepleteStamina(-staminaRecMod, true);
         }
+    }
+    public void DepleteStamina(float howMuch, bool overTime)
+    {
+        if (overTime)
+        {
+            currStamina -= howMuch * Time.deltaTime;
+        }
+        else
+        {
+            currStamina -= howMuch;
+        }
+        ui.UpdateStamina(currStamina, maxStamina);
+    }
+    public void SetAdditionalSpeed(float s)
+    {
+        addSpeed = s;
+        Debug.Log($"Additional speed changed to {addSpeed}");
     }
     void HandleGravity()
     {

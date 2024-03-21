@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerUI : MainMenu
 {
     [SerializeField]
-    GameObject escMenu, healthBar;
+    GameObject escMenu, healthBar, staminaBar;
     void Update()
     {
         if (Input.GetButtonDown("Cancel"))
@@ -19,5 +19,10 @@ public class PlayerUI : MainMenu
     {
         float barLength = (float)currHP / (float)maxHP;
         healthBar.transform.localScale = new Vector3(barLength, 1, 1);
+    }
+    public void UpdateStamina(float currS, float maxS)
+    {
+        float barLength = currS / maxS;
+        staminaBar.transform.localScale = new Vector3(barLength, 1, 1);
     }
 }

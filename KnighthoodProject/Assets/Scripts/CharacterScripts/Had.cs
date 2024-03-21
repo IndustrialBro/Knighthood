@@ -14,15 +14,18 @@ public abstract class Had : MonoBehaviour
     {
         currHealth = MaxHealth;
     }
-    public virtual void GetHit(Attack a)
+    public virtual void GetHit(Attack a, int ad)
     {
-        if (armour == 0)
+        int temp = armour - a.armourPen;
+        if (temp < 0)
         {
-            currHealth -= a.damage;
+            currHealth -= a.damage + ad;
+            Debug.Log($"{gameObject.name} has suffered {a.damage + ad} damage");
         }
         else
         {
-            currHealth -= (a.damage * a.armourPen) / armour;
+            currHealth -= a.damage - temp + ad;
+            Debug.Log($"{gameObject.name} has suffered {a.damage - temp + ad} damage");
         }
         
         if (currHealth <= 0)
@@ -30,10 +33,15 @@ public abstract class Had : MonoBehaviour
     }
     public virtual void Heal(int howMuch)
     {
-        Debug.Log("Healed");
+        Debug.Log("Get healed, ya fuckin' nerd");
         currHealth += howMuch;
         if(currHealth > MaxHealth)
             currHealth = MaxHealth;
     }
     protected abstract void Die();
+    public void IncreaseArmour(int howMuch)
+    {
+        armour += howMuch;
+        Debug.Log($"Armour is {armour}");
+    }
 }

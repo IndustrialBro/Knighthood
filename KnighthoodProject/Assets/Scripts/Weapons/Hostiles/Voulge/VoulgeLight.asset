@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: VoulgeLight
   m_EditorClassIdentifier: 
   <damage>k__BackingField: 40
-  <armourPen>k__BackingField: 20
+  <armourPen>k__BackingField: 0
   <light>k__BackingField: 1

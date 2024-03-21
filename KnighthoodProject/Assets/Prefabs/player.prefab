@@ -606,10 +606,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   runningSpeed: 1.5
-  currStamina: 0
   maxRunningCooldown: 1
   maxStamina: 3
   staminaRecMod: 1
+  ui: {fileID: 8821512809619940109}
   maxJumpTime: 0.5
   maxJumpHeight: 1
 --- !u!114 &960205684
@@ -2319,3 +2319,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8520520755922601957}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8821512809619940109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 887973642194412776, guid: d670d5cfd2d90384394460fe43bdb953,
+    type: 3}
+  m_PrefabInstance: {fileID: 8520520755922601957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d265b858bb7a0e049a90964e060e78a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

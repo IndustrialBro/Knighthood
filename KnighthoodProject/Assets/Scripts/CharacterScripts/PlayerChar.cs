@@ -21,15 +21,15 @@ public class PlayerChar : Had
         menu = GetComponentInChildren<PlayerUI>();
         GameManager.instance.SetPlayerTransform(this.transform);
     }
-    public override void GetHit(Attack a)
+    public override void GetHit(Attack a, int ad)
     {
         if (isblocking && pm.currStamina > 0)
         {
-            pm.currStamina -= blockCost;
+            pm.DepleteStamina(blockCost, false);
         }
         else
         {
-            base.GetHit(a);
+            base.GetHit(a, ad);
             menu.UpdateHealthBar(MaxHealth, currHealth);
         }
     }

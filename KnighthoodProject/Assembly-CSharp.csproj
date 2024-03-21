@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Weapons\PlayerWeapon.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Dummy.cs" />
+    <Compile Include="Assets\Scripts\MapContent\Potions\DamageIncreaseEffect.cs" />
     <Compile Include="Assets\Scripts\MapContent\Potions\Effect.cs" />
     <Compile Include="Assets\Scripts\MapContent\Potions\InstantHealPotion.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\StateSwitchTrigger.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="Assets\Scripts\MapContent\Potions\PotionAffected.cs" />
     <Compile Include="Assets\Scripts\Weapons\Hostiles\DBsword\DBsword.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\ISavable.cs" />
+    <Compile Include="Assets\Scripts\MapContent\Potions\ProtectionEffect.cs" />
+    <Compile Include="Assets\Scripts\MapContent\Potions\SpeedIncreaseEffect.cs" />
     <Compile Include="Assets\Scripts\MapContent\SpawnerScript.cs" />
     <Compile Include="Assets\Scripts\PlayerControls\PlayerMovementWPrebuilt.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />

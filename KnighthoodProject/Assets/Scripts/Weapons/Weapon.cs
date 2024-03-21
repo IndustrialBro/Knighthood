@@ -13,6 +13,7 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     protected Attack lightAttack, heavyAttack;
     protected Attack currAtt;
+    protected int addDmg = 0;
     
     public bool readyToStrike = true;
     protected string targetTag;
@@ -60,7 +61,7 @@ public abstract class Weapon : MonoBehaviour
     {
         if (other.tag == targetTag)
         {
-            other.GetComponent<Had>().GetHit(currAtt);
+            other.GetComponent<Had>().GetHit(currAtt, addDmg);
         }
     }
 
@@ -129,5 +130,10 @@ public abstract class Weapon : MonoBehaviour
                 triggers[i].enabled = false;
             }
         }
+    }
+    public void SetAdditionalDamage(int dmg)
+    {
+        addDmg = dmg;
+        Debug.Log($"Additional damage changed to {addDmg}");
     }
 }
