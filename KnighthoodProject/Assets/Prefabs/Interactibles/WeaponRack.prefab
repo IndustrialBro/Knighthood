@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbce306ce8768d49bb76f26a3607ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 5316462727830957887, guid: 5153d43d36de0dc4cb6afb34ee72a37d, type: 3}
+  weapon: {fileID: 11400000, guid: c31f65ba7e1ae39469cbd28275e4a7cb, type: 2}
 --- !u!1 &6673750684788459567
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbce306ce8768d49bb76f26a3607ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 6341645884255127375, guid: 157355c52a4f3e145b73c6b719260eca, type: 3}
+  weapon: {fileID: 11400000, guid: 470dfde4aaae0f048b45eb01dbd4fd52, type: 2}
 --- !u!65 &6673750686665450936
 BoxCollider:
   m_ObjectHideFlags: 0

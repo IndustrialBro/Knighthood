@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponSwap : MonoBehaviour, IInteractable
 {
     [SerializeField]
-    GameObject weapon;
+    Equipable weapon;
     public void Interact(GameObject sender)
     {
         Debug.Log("Interacted with weapon swap.");

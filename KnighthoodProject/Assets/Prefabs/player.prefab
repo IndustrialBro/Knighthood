@@ -515,9 +515,9 @@ GameObject:
   - component: {fileID: 8821512808120033080}
   - component: {fileID: 8821512808120033079}
   - component: {fileID: 8821512808120033078}
-  - component: {fileID: 960205684}
   - component: {fileID: 104603668}
   - component: {fileID: 1737832049}
+  - component: {fileID: 7096348780221552701}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -612,21 +612,6 @@ MonoBehaviour:
   ui: {fileID: 8821512809619940109}
   maxJumpTime: 0.5
   maxJumpHeight: 1
---- !u!114 &960205684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8821512808120033077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99d6a81c4cfbe47468f303e8c650fce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chosenArmament: {fileID: 6341645884255127375, guid: 157355c52a4f3e145b73c6b719260eca,
-    type: 3}
-  weaponSlot: {fileID: 8821512808157491843}
 --- !u!114 &104603668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +637,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxInterval: 1
+--- !u!114 &7096348780221552701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821512808120033077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d6a81c4cfbe47468f303e8c650fce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chosenArmament: {fileID: 11400000, guid: 470dfde4aaae0f048b45eb01dbd4fd52, type: 2}
+  weaponSlot:
+  - {fileID: 8821512808157491843}
 --- !u!1 &8821512808157491842
 GameObject:
   m_ObjectHideFlags: 0

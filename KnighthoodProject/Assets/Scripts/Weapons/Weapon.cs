@@ -5,8 +5,8 @@ using UnityEngine;
 public abstract class Weapon : MonoBehaviour
 {
     protected Animator anim;
-    [SerializeField]
-    public RuntimeAnimatorController animCon;
+    //[SerializeField]
+    //public RuntimeAnimatorController animCon;
 
 
     protected Queue<Attack> attackQueue = new Queue<Attack>();
@@ -38,7 +38,8 @@ public abstract class Weapon : MonoBehaviour
         triggers = GetComponents<Collider>();
         dude = GetComponentInParent<Had>();
         dude.blockCost = blockCost;
-        SetUpAnimator();
+        //SetUpAnimator();
+        anim = GetComponentInParent<Animator>();
         SetTargetTag();
         SetAttacking(false);
         GetComponentInParent<Middleman>().SetNewWeaponComponent(this);
@@ -99,11 +100,11 @@ public abstract class Weapon : MonoBehaviour
         dude.isblocking = false;
         anim.SetBool("Blocking", false);
     }
-    protected void SetUpAnimator()
-    {
-        anim = GetComponentInParent<Animator>();
-        anim.runtimeAnimatorController = animCon;
-    }
+    //protected void SetUpAnimator()
+    //{
+    //    anim = GetComponentInParent<Animator>();
+    //    anim.runtimeAnimatorController = animCon;
+    //}
     public void EmptyQueue()
     {
         attackQueue.Clear();

@@ -58,7 +58,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5316462727830957887}
-  m_LocalRotation: {x: -0.064933985, y: -0.017472258, z: -0.0020043207, w: 0.99773455}
+  m_LocalRotation: {x: -0.061046276, y: -0.008710188, z: -0.0005327384, w: 0.99809676}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -66,7 +66,7 @@ Transform:
   - {fileID: 5316462726312888753}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -7.449, y: -2, z: -0.1}
+  m_LocalEulerAnglesHint: {x: -7, y: -1, z: 0}
 --- !u!114 &5316462727830957826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,11 +79,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f354047b206cec42acd22814fdc3b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animCon: {fileID: 9100000, guid: 567f6d83f7df7904ca1d961fce587aa7, type: 2}
   lightAttack: {fileID: 11400000, guid: e00ebf36f292e9c43bc21651c8e1aa9b, type: 2}
   heavyAttack: {fileID: 11400000, guid: f28c24bf686f0614fad8ad7c22b3977a, type: 2}
   readyToStrike: 1
-  attacking: 0
   maxAttSpree: 2
   resetSpreeTimer: 1.2
   blockCost: 0.3
@@ -99,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.13885967, y: 0.3189544, z: 0.50835395}
-  m_Center: {x: 0.0026479005, y: -0.009016473, z: 1.030606}
+  m_Size: {x: 0.17318735, y: 0.30077758, z: 0.50835395}
+  m_Center: {x: -0.01781176, y: 0.002959855, z: 1.0306228}
 --- !u!54 &5316462727830957827
 Rigidbody:
   m_ObjectHideFlags: 0

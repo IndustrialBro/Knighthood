@@ -405,6 +405,7 @@
 "Assets/Scripts/Weapons/Hostiles/Voulge/Voulge.cs"
 "Assets/Scripts/Weapons/HostileWeapon.cs"
 "Assets/Scripts/Weapons/Middleman.cs"
+"Assets/Scripts/Weapons/Player/Equipable.cs"
 "Assets/Scripts/Weapons/Player/LongSword/LongSword.cs"
 "Assets/Scripts/Weapons/Player/WarHammer/Warhammer.cs"
 "Assets/Scripts/Weapons/PlayerWeapon.cs"

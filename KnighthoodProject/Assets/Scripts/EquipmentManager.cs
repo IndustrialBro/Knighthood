@@ -5,13 +5,17 @@ using UnityEngine;
 public class EquipmentManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject chosenArmament;
-    GameObject currArmament = null;
-    static GameObject lastChosenWeapon = null;
+    Equipable chosenArmament;
+    List<GameObject> currArmament = new List<GameObject>();
+    static Equipable lastChosenWeapon = null;
     [SerializeField]
-    Transform weaponSlot;
+    List<Transform> weaponSlot;
+
+    Animator anim;
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
+
         //lastChosenWeapon = SaveAndLoad.instance.LoadObjectFromJson<GameObject>("LastChosenWeapon");
         if (lastChosenWeapon != null)
         {
@@ -22,19 +26,41 @@ public class EquipmentManager : MonoBehaviour
     }
     void EquipWeapon()
     {
-        if(currArmament != null)
-            Destroy(currArmament);
+        //Unequip
+        for (int i = 0; i < currArmament.Count; i++)
+        {
+            if (currArmament[i] != null)
+            {
+                Destroy(currArmament[i]);
+            }
+        }
+        currArmament.Clear();
 
-        currArmament = Instantiate(chosenArmament);
-        currArmament.transform.SetParent(weaponSlot, false);
+        //Equip
+        for(int i = 0; i < weaponSlot.Count; i++)
+        {
+            if(i < chosenArmament.weapons.Count)
+            {
+                GameObject temp = Instantiate(chosenArmament.weapons[i]);
+                temp.transform.SetParent(weaponSlot[i], false);
+                currArmament.Add(temp);
+            }
+            else { break; }
+        }
+
         lastChosenWeapon = chosenArmament;
+
+        SetUpAnimator();
     }
-    public void ChangeWeaponChoice(GameObject weapon)
+    public void ChangeWeaponChoice(Equipable weapon)
     {
         Debug.Log("Chose new weapon!");
         chosenArmament = weapon;
         //SaveAndLoad.instance.SaveObjectAsJson<GameObject>(chosenArmament, "LastChosenWeapon");
         EquipWeapon();
     }
-
+    void SetUpAnimator()
+    {
+        anim.runtimeAnimatorController = chosenArmament.animCon;
+    }
 }
