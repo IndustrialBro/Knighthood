@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\MapContent\Potions\DamageIncreaseEffect.cs" />
     <Compile Include="Assets\Scripts\MapContent\Potions\Effect.cs" />
     <Compile Include="Assets\Scripts\MapContent\Potions\InstantHealPotion.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Player\Equipable.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\StateSwitchTrigger.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileChasingState.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Projectile.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\Scripts\Weapons\Hostiles\Falchion\Falchion.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\Enemy.cs" />
     <Compile Include="Assets\Scripts\Weapons\Middleman.cs" />
+    <Compile Include="Assets\Scripts\CharacterScripts\BlockTriggerScript.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileState.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\PlayerChar.cs" />
@@ -108,7 +110,6 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Bosses\SecondBoss\SecondBoss.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\Had.cs" />
-    <Compile Include="Assets\Scripts\Weapons\Player\Equipable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -10,13 +10,17 @@ public class EquipmentManager : MonoBehaviour
     static Equipable lastChosenWeapon = null;
     [SerializeField]
     List<Transform> weaponSlot;
+    [SerializeField]
+    GameObject blockTriggerMount;
+    BoxCollider bt;
 
     Animator anim;
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
+        bt = blockTriggerMount.GetComponent<BoxCollider>();
 
-        //lastChosenWeapon = SaveAndLoad.instance.LoadObjectFromJson<GameObject>("LastChosenWeapon");
+        //lastChosenWeapon = SaveAndLoad.instance.LoadObjectFromJson<Equipable>("LastChosenWeapon");
         if (lastChosenWeapon != null)
         {
             ChangeWeaponChoice(lastChosenWeapon);
@@ -44,23 +48,27 @@ public class EquipmentManager : MonoBehaviour
                 GameObject temp = Instantiate(chosenArmament.weapons[i]);
                 temp.transform.SetParent(weaponSlot[i], false);
                 currArmament.Add(temp);
+                temp.GetComponent<Weapon>().SetBlockTrigger(bt);
             }
             else { break; }
         }
 
         lastChosenWeapon = chosenArmament;
 
-        SetUpAnimator();
+        anim.runtimeAnimatorController = chosenArmament.animCon;
+        
+        SetupBlockTrigger();
     }
     public void ChangeWeaponChoice(Equipable weapon)
     {
         Debug.Log("Chose new weapon!");
         chosenArmament = weapon;
-        //SaveAndLoad.instance.SaveObjectAsJson<GameObject>(chosenArmament, "LastChosenWeapon");
+        //SaveAndLoad.instance.SaveObjectAsJson<Equipable>(chosenArmament, "LastChosenWeapon");
         EquipWeapon();
     }
-    void SetUpAnimator()
+    void SetupBlockTrigger()
     {
-        anim.runtimeAnimatorController = chosenArmament.animCon;
+        bt.size = new Vector3(chosenArmament.blockerWidth, 2);
+        bt.isTrigger = true;
     }
 }

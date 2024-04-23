@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Knighthood\\KnighthoodProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\weapons\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\characterscripts\\playerchar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterscripts\\playerchar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\characterscripts\\had.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterscripts\\had.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\playercontrols\\interactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrols\\interactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Weapon.cs",
+              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\Weapon.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\Weapon.cs",
+              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\Weapon.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapons\\Weapon.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAswEgAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T06:20:35.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerChar.cs",
+              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\CharacterScripts\\PlayerChar.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterScripts\\PlayerChar.cs",
+              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\CharacterScripts\\PlayerChar.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterScripts\\PlayerChar.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwCcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T06:15:54.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Interactor.cs",
+              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\PlayerControls\\Interactor.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControls\\Interactor.cs",
+              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\PlayerControls\\Interactor.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControls\\Interactor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T05:56:47.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Had.cs",
+              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\CharacterScripts\\Had.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterScripts\\Had.cs",
+              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\CharacterScripts\\Had.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterScripts\\Had.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowDEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T05:23:58.911Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

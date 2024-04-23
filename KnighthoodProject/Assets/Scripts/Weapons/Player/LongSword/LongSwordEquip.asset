@@ -16,3 +16,4 @@ MonoBehaviour:
   - {fileID: 6341645884255127375, guid: 157355c52a4f3e145b73c6b719260eca, type: 3}
   <animCon>k__BackingField: {fileID: 9100000, guid: f3b94bc807f4cb74da4e8947d0d15895,
     type: 2}
+  <blockerWidth>k__BackingField: 1

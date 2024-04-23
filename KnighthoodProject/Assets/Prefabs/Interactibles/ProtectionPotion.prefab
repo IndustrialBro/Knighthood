@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8239412866037383037}
   - component: {fileID: 419160830277010716}
   - component: {fileID: 3350122268570300464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProtectionPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

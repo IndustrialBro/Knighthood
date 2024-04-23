@@ -32,6 +32,8 @@ public abstract class Weapon : MonoBehaviour
     protected Had dude;
     [SerializeField]
     float blockCost;
+    bool parried = false;
+    BoxCollider blockTrigger;
 
     protected virtual void Start()
     {
@@ -62,7 +64,14 @@ public abstract class Weapon : MonoBehaviour
     {
         if (other.tag == targetTag)
         {
-            other.GetComponent<Had>().GetHit(currAtt, addDmg);
+            if(!parried)
+            {
+                other.GetComponent<Had>().GetHit(currAtt, addDmg);
+            }
+            else
+            {
+                other.GetComponent<Had>().KnockBack(currAtt, transform.position);
+            }
         }
     }
 
@@ -92,12 +101,14 @@ public abstract class Weapon : MonoBehaviour
     protected void Block()
     {
         EmptyQueue();
-        dude.isblocking = true;
+        //dude.isblocking = true;
+        blockTrigger.enabled = true;
         anim.SetBool("Blocking", true);
     }
     protected void Unblock()
     {
-        dude.isblocking = false;
+        //dude.isblocking = false;
+        blockTrigger.enabled = false;
         anim.SetBool("Blocking", false);
     }
     //protected void SetUpAnimator()
@@ -114,6 +125,9 @@ public abstract class Weapon : MonoBehaviour
     {
         readyToStrike = b;
         //Debug.Log($"Ready: {readyToStrike}");
+
+        if (readyToStrike)
+            parried = false;
     }
     public void SetAttacking(bool b)
     {
@@ -136,5 +150,13 @@ public abstract class Weapon : MonoBehaviour
     {
         addDmg = dmg;
         Debug.Log($"Additional damage changed to {addDmg}");
+    }
+    public void Parry()
+    {
+        parried = true;
+    }
+    public void SetBlockTrigger(BoxCollider bt)
+    {
+        blockTrigger = bt;
     }
 }

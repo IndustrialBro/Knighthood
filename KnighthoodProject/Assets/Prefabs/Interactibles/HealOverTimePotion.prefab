@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4890560639826555036}
   - component: {fileID: 4022992988770811944}
   - component: {fileID: 5219316059800006476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealOverTimePotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

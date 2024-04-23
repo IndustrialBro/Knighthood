@@ -150,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6234727474300228396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.111414, y: 1.4, z: 9.809251}
+  m_LocalPosition: {x: 15.286085, y: 1.4, z: 9.525549}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -226,7 +226,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 20
   armour: 0
-  isblocking: 0
   blockCost: 0
 --- !u!1 &6234727474750240438
 GameObject:
@@ -783,7 +782,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 78f7c9e0a62967d45ac224c20658c23a, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0

@@ -7,7 +7,6 @@ public abstract class Had : MonoBehaviour
     [SerializeField]
     protected int MaxHealth, armour;
     protected int currHealth;
-    public bool isblocking = false;
     public float blockCost;
 
     protected virtual void Start()
@@ -43,5 +42,13 @@ public abstract class Had : MonoBehaviour
     {
         armour += howMuch;
         Debug.Log($"Armour is {armour}");
+    }
+    public virtual void KnockBack(Attack a, Vector3 sourceLoc)
+    {
+        //Nefunctionální
+        Vector3 dir = transform.position - sourceLoc;
+        dir = dir.normalized;
+
+        Debug.Log($"Knocked back: x={dir.x}, y={dir.y}, z={dir.z}");
     }
 }

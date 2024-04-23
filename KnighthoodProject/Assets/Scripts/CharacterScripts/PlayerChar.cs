@@ -23,19 +23,21 @@ public class PlayerChar : Had
     }
     public override void GetHit(Attack a, int ad)
     {
-        if (isblocking && pm.currStamina > 0)
-        {
-            pm.DepleteStamina(blockCost, false);
-        }
-        else
-        {
-            base.GetHit(a, ad);
-            menu.UpdateHealthBar(MaxHealth, currHealth);
-        }
+        base.GetHit(a, ad);
+        menu.UpdateHealthBar(MaxHealth, currHealth);
     }
     public override void Heal(int howMuch)
     {
         base.Heal(howMuch);
         menu.UpdateHealthBar(MaxHealth, currHealth);
+    }
+    public override void KnockBack(Attack a, Vector3 sourceLoc)
+    {
+        if (pm.currStamina > 0)
+            pm.DepleteStamina(blockCost, false);
+        else
+            GetHit(a, 0);
+        
+        base.KnockBack(a, sourceLoc);
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2196502985664758849}
   - component: {fileID: 538447854720888917}
   - component: {fileID: 4931361200053505676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HammerSwap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6673750684788459566}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6673750686546774280}
   - component: {fileID: 6673750686546774327}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WeaponRack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 6673750686665450937}
   - component: {fileID: 6673750686665450919}
   - component: {fileID: 6673750686665450936}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SwordSwap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6673750686674629231}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5963117408180944902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,6 +331,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GenericWarhammer
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1388e364a601b504faec9374f2ee0f76,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1388e364a601b504faec9374f2ee0f76, type: 3}
 --- !u!4 &4420847706178048542 stripped
@@ -406,6 +411,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0b2d58206cd06674dad3ba64c8b22edf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2d58206cd06674dad3ba64c8b22edf, type: 3}
 --- !u!4 &6563809122127546611 stripped
@@ -480,6 +490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LongSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 690ecb91a8eb66b48a6e9e177d15c988,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 690ecb91a8eb66b48a6e9e177d15c988, type: 3}
