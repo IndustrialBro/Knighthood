@@ -25,8 +25,7 @@ public abstract class Weapon : MonoBehaviour
     protected int attSpree = 0;
     [SerializeField]
     protected float resetSpreeTimer;
-    Coroutine AttSpreeResetCoroutine = null;
-    int isHeavyHash = Animator.StringToHash("IsHeavy"), attCountHash = Animator.StringToHash("AttCount"), strikeHash = Animator.StringToHash("Strike");
+    int isHeavyHash = Animator.StringToHash("IsHeavy"), strikeHash = Animator.StringToHash("Strike");
 
     //Blokování
     protected Had dude;
@@ -77,25 +76,9 @@ public abstract class Weapon : MonoBehaviour
 
     protected void AnimateAttacks(Attack attack)
     {
-        if (AttSpreeResetCoroutine != null)
-            StopCoroutine(AttSpreeResetCoroutine);
-
         attSpree++;
         anim.SetBool(isHeavyHash, !attack.light);
-        anim.SetInteger(attCountHash, attSpree);
         anim.SetTrigger(strikeHash);
-
-        if (attSpree == maxAttSpree)
-            attSpree = 0;
-        else
-            AttSpreeResetCoroutine = StartCoroutine(ResetAttSpree());
-    }
-    
-    protected IEnumerator ResetAttSpree()
-    {
-        yield return new WaitForSeconds(resetSpreeTimer);
-        attSpree = 0;
-        //Debug.Log("Spree reset");
     }
     protected abstract void SetTargetTag();
     protected void Block()

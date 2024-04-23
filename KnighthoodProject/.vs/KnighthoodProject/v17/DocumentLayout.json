@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\characterscripts\\playerchar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|D:\\Knighthood\\KnighthoodProject\\assets\\scripts\\characterscripts\\playerchar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterscripts\\playerchar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\characterscripts\\had.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|D:\\Knighthood\\KnighthoodProject\\assets\\scripts\\characterscripts\\had.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterscripts\\had.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\playercontrols\\interactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|D:\\Knighthood\\KnighthoodProject\\assets\\scripts\\playercontrols\\interactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrols\\interactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\Weapon.cs",
               "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\Weapon.cs",
               "RelativeToolTip": "Assets\\Scripts\\Weapons\\Weapon.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAswEgAAAA7AAAA",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAUwFEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T06:20:35.157Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Assets\\Scripts\\CharacterScripts\\PlayerChar.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAQwCcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T06:15:54.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T06:15:54.503Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerControls\\Interactor.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T05:56:47.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T05:56:47.605Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Assets\\Scripts\\CharacterScripts\\Had.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAowDEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T05:23:58.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T05:23:58.911Z"
             }
           ]
         }
