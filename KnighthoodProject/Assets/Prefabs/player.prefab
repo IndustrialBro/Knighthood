@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3682898407482587975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5890100775788326649}
+  m_Layer: 6
+  m_Name: SecondarySlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5890100775788326649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3682898407482587975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8821512808759486975}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8336082011376549967
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +661,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   armour: 0
-  isblocking: 0
   blockCost: 0
   DeathScreen: {fileID: 8821512809264241559}
 --- !u!143 &8821512808120033079
@@ -709,8 +739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chosenArmament: {fileID: 11400000, guid: 470dfde4aaae0f048b45eb01dbd4fd52, type: 2}
-  weaponSlot:
-  - {fileID: 8821512808157491843}
+  primarySlot: {fileID: 8821512808157491843}
+  secondarySlot: {fileID: 5890100775788326649}
   blockTriggerMount: {fileID: 8336082011376549967}
 --- !u!1 &8821512808157491842
 GameObject:
@@ -1502,6 +1532,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8821512807865182866}
+  - {fileID: 5890100775788326649}
   m_Father: {fileID: 8821512807652951242}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

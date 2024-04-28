@@ -6,7 +6,9 @@ using UnityEngine;
 public class Equipable : ScriptableObject
 {
     [field: SerializeField]
-    public List<GameObject> weapons { get; private set; } = new List<GameObject>();
+    public GameObject weapon { get; private set; }
+    [field: SerializeField]
+    public GameObject secondary { get; private set; }
     [field: SerializeField]
     public RuntimeAnimatorController animCon { get; private set; }
     [field: SerializeField]

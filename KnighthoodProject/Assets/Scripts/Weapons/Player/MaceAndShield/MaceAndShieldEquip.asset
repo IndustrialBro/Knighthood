@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e929f649d02d68146995e4526f675b37, type: 3}
-  m_Name: LongSwordEquip
+  m_Name: MaceAndShieldEquip
   m_EditorClassIdentifier: 
-  <weapon>k__BackingField: {fileID: 6341645884255127375, guid: 157355c52a4f3e145b73c6b719260eca,
+  <weapon>k__BackingField: {fileID: 2987049635895215972, guid: 48329079b659d8646b5fb897c8be96ea,
     type: 3}
-  <secondary>k__BackingField: {fileID: 0}
-  <animCon>k__BackingField: {fileID: 9100000, guid: f3b94bc807f4cb74da4e8947d0d15895,
+  <secondary>k__BackingField: {fileID: 6006390694896329641, guid: 81c0d261fa713834abcb49f2b7ee535c,
+    type: 3}
+  <animCon>k__BackingField: {fileID: 9100000, guid: 11899b5287d013045a4aa9f95d5b7fa7,
     type: 2}
-  <blockerWidth>k__BackingField: 0.75
+  <blockerWidth>k__BackingField: 1.2

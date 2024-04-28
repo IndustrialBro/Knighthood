@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e929f649d02d68146995e4526f675b37, type: 3}
   m_Name: WarhammerEquip
   m_EditorClassIdentifier: 
-  <weapons>k__BackingField:
-  - {fileID: 5316462727830957887, guid: 5153d43d36de0dc4cb6afb34ee72a37d, type: 3}
+  <weapon>k__BackingField: {fileID: 5316462727830957887, guid: 5153d43d36de0dc4cb6afb34ee72a37d,
+    type: 3}
+  <secondary>k__BackingField: {fileID: 0}
   <animCon>k__BackingField: {fileID: 9100000, guid: 567f6d83f7df7904ca1d961fce587aa7,
     type: 2}
   <blockerWidth>k__BackingField: 1.5

@@ -9,7 +9,7 @@ public class EquipmentManager : MonoBehaviour
     List<GameObject> currArmament = new List<GameObject>();
     static Equipable lastChosenWeapon = null;
     [SerializeField]
-    List<Transform> weaponSlot;
+    Transform primarySlot, secondarySlot;
     [SerializeField]
     GameObject blockTriggerMount;
     BoxCollider bt;
@@ -41,16 +41,18 @@ public class EquipmentManager : MonoBehaviour
         currArmament.Clear();
 
         //Equip
-        for(int i = 0; i < weaponSlot.Count; i++)
+        GameObject temp = Instantiate(chosenArmament.weapon);
+        temp.transform.SetParent(primarySlot, false);
+        currArmament.Add(temp);
+        temp.GetComponent<Weapon>().SetBlockTrigger(bt);
+
+        //Equip secondary Weapon
+        if(chosenArmament.secondary != null)
         {
-            if(i < chosenArmament.weapons.Count)
-            {
-                GameObject temp = Instantiate(chosenArmament.weapons[i]);
-                temp.transform.SetParent(weaponSlot[i], false);
-                currArmament.Add(temp);
-                temp.GetComponent<Weapon>().SetBlockTrigger(bt);
-            }
-            else { break; }
+            GameObject temp2 = Instantiate(chosenArmament.secondary);
+            temp2.transform.SetParent(secondarySlot, false);
+            currArmament.Add(temp2);
+            temp.GetComponent<Weapon>().SetSecondaryWeapon(temp2.GetComponent<SecondaryWeapon>());
         }
 
         lastChosenWeapon = chosenArmament;

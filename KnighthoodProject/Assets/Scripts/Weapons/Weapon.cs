@@ -20,9 +20,9 @@ public abstract class Weapon : MonoBehaviour
     Collider[] triggers;
 
     //Animace útokù
-    [SerializeField]
-    protected int maxAttSpree;
-    protected int attSpree = 0;
+    //[SerializeField]
+    //protected int maxAttSpree;
+    //protected int attSpree = 0;
     [SerializeField]
     protected float resetSpreeTimer;
     int isHeavyHash = Animator.StringToHash("IsHeavy"), strikeHash = Animator.StringToHash("Strike");
@@ -34,6 +34,9 @@ public abstract class Weapon : MonoBehaviour
     bool parried = false;
     BoxCollider blockTrigger;
 
+    //štít
+    SecondaryWeapon sw;
+
     protected virtual void Start()
     {
         triggers = GetComponents<Collider>();
@@ -44,6 +47,7 @@ public abstract class Weapon : MonoBehaviour
         SetTargetTag();
         SetAttacking(false);
         GetComponentInParent<Middleman>().SetNewWeaponComponent(this);
+        Unblock();
     }
     protected void MoveThroughQueue()
     {
@@ -76,7 +80,7 @@ public abstract class Weapon : MonoBehaviour
 
     protected void AnimateAttacks(Attack attack)
     {
-        attSpree++;
+        //attSpree++;
         anim.SetBool(isHeavyHash, !attack.light);
         anim.SetTrigger(strikeHash);
     }
@@ -91,8 +95,11 @@ public abstract class Weapon : MonoBehaviour
     protected void Unblock()
     {
         //dude.isblocking = false;
-        blockTrigger.enabled = false;
-        anim.SetBool("Blocking", false);
+        if(blockTrigger != null)
+        {
+            blockTrigger.enabled = false;
+            anim.SetBool("Blocking", false);
+        }
     }
     //protected void SetUpAnimator()
     //{
@@ -102,7 +109,7 @@ public abstract class Weapon : MonoBehaviour
     public void EmptyQueue()
     {
         attackQueue.Clear();
-        attSpree = 0;
+        //attSpree = 0;
     }
     public void SetReadyToStrike(bool b)
     {
@@ -120,6 +127,8 @@ public abstract class Weapon : MonoBehaviour
             {
                 triggers[i].enabled = true;
             }
+            if (sw != null)
+                sw.GetReadyToStrike(currAtt, addDmg);
         }
         else
         {
@@ -127,6 +136,8 @@ public abstract class Weapon : MonoBehaviour
             {
                 triggers[i].enabled = false;
             }
+            if(sw != null)
+                sw.StopStriking();
         }
     }
     public void SetAdditionalDamage(int dmg)
@@ -141,5 +152,9 @@ public abstract class Weapon : MonoBehaviour
     public void SetBlockTrigger(BoxCollider bt)
     {
         blockTrigger = bt;
+    }
+    public void SetSecondaryWeapon(SecondaryWeapon sw)
+    {
+        this.sw = sw;
     }
 }

@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Dummy.cs" />
     <Compile Include="Assets\Scripts\MapContent\Potions\DamageIncreaseEffect.cs" />
     <Compile Include="Assets\Scripts\MapContent\Potions\Effect.cs" />
+    <Compile Include="Assets\Scripts\Weapons\SecondaryWeapon.cs" />
     <Compile Include="Assets\Scripts\MapContent\Potions\InstantHealPotion.cs" />
     <Compile Include="Assets\Scripts\Weapons\Player\Equipable.cs" />
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\StateSwitchTrigger.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Bosses\SecondBoss\SecondBoss.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\Had.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Player\MaceAndShield\Mace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

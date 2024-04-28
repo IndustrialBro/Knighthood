@@ -182,7 +182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5646963145674022143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.076992, y: 1.4, z: 12.124273}
+  m_LocalPosition: {x: 13.46123, y: 1.4, z: 10.271943}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -350,7 +350,6 @@ MonoBehaviour:
   lightAttack: {fileID: 11400000, guid: d26ab59b56b7cba4ca02838eb2138bbb, type: 2}
   heavyAttack: {fileID: 11400000, guid: 3310a0f00cf8bce439731817e3593943, type: 2}
   readyToStrike: 1
-  maxAttSpree: 1
   resetSpreeTimer: 1.2
   blockCost: 0
 --- !u!4 &2818193548130991110 stripped
