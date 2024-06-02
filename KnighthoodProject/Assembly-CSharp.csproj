@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Basic hostile\States\HostileStateManager.cs" />
     <Compile Include="Assets\Scripts\MapContent\LevelSwitch.cs" />
     <Compile Include="Assets\Scripts\MapContent\WeaponSwap.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Player\MaceAndShield\Mace.cs" />
     <Compile Include="Assets\Scripts\Weapons\Hostiles\Voulge\Voulge.cs" />
     <Compile Include="Assets\Scripts\MapContent\IInteractable.cs" />
     <Compile Include="Assets\Scripts\MapContent\Potions\Potion.cs" />
@@ -111,7 +112,6 @@
     <Compile Include="Assets\Scripts\Hostile Scripts\Bosses\SecondBoss\SecondBoss.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\Had.cs" />
-    <Compile Include="Assets\Scripts\Weapons\Player\MaceAndShield\Mace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

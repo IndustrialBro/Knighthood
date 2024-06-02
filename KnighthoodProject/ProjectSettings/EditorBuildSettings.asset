@@ -11,7 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: c7d5c1b274c56654ab37c66ee43b9dac
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: 71b8c2c9df571f94387a367eca770e42
+  - enabled: 0
+    path: Assets/Scenes/TutArenaScene.unity
+    guid: 66eb246ae42819142aee7682fe0ad945
+  - enabled: 1
+    path: Assets/Scenes/LobbyScene.unity
+    guid: ddc5dfe79d119d044a93090d58e9ca20
+  - enabled: 1
+    path: Assets/Scenes/PresentationScene.unity
+    guid: b2d36e56d5525634fa080bec3e6c6217
   m_configObjects: {}
