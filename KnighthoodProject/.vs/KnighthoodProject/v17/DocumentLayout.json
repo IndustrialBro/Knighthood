@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hostile scripts\\basic hostile\\states\\stateswitchtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\weapons\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|D:\\Knighthood\\KnighthoodProject\\assets\\scripts\\weapons\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -107,8 +107,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Weapons\\Weapon.cs",
               "ViewState": "AQIAAF8AAAAAAAAAAIBZwGQAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T06:20:35.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T06:20:35.157Z"
             }
           ]
         }
