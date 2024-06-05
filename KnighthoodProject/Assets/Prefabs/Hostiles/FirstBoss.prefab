@@ -104,7 +104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 150
   armour: 50
-  isblocking: 0
   blockCost: 0
 --- !u!1 &8954890616949446428
 GameObject:
@@ -417,6 +416,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -5783105910782313239, guid: e4e01008d1e0af546bb89e454cb8681a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa8badca86be46540b44bb20461db6b9, type: 2}
     - target: {fileID: -5005716639725030655, guid: e4e01008d1e0af546bb89e454cb8681a,
         type: 3}
       propertyPath: m_Layer
