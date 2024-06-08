@@ -57,7 +57,7 @@ public class PlayerMovementWPrebuilt : MonoBehaviour
 
         cc.Move(globalMove * (speed + addSpeed));
         HandleGravity();
-        HandleJump();
+        //HandleJump();
     }
 
     void ProcessRunning()

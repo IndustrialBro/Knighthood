@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "D:\\Knighthood\\KnighthoodProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\hostile scripts\\basic hostile\\states\\stateswitchtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hostile scripts\\basic hostile\\states\\stateswitchtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\lightswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lightswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|D:\\Knighthood\\KnighthoodProject\\assets\\scripts\\weapons\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|D:\\Knighthood\\KnighthoodProject\\assets\\scripts\\weapons\\player\\maceandshield\\mace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\player\\maceandshield\\mace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|D:\\Knighthood\\KnighthoodProject\\assets\\scripts\\weapons\\secondaryweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\secondaryweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|D:\\Knighthood\\KnighthoodProject\\assets\\scripts\\equipmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\equipmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|D:\\Knighthood\\KnighthoodProject\\assets\\scripts\\weapons\\player\\equipable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\player\\equipable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|d:\\knighthood\\knighthoodproject\\assets\\scripts\\playercontrols\\playermovementwprebuilt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31514602-83D0-BB17-C23D-5A792273AA10}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrols\\playermovementwprebuilt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,80 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StateSwitchTrigger.cs",
-              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Hostile Scripts\\Basic hostile\\States\\StateSwitchTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Hostile Scripts\\Basic hostile\\States\\StateSwitchTrigger.cs",
-              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Hostile Scripts\\Basic hostile\\States\\StateSwitchTrigger.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Hostile Scripts\\Basic hostile\\States\\StateSwitchTrigger.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAQAAAA",
+              "DocumentIndex": 1,
+              "Title": "PlayerMovementWPrebuilt.cs",
+              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\PlayerControls\\PlayerMovementWPrebuilt.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControls\\PlayerMovementWPrebuilt.cs",
+              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\PlayerControls\\PlayerMovementWPrebuilt.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControls\\PlayerMovementWPrebuilt.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwDsAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T17:49:19.531Z",
+              "WhenOpened": "2024-06-08T06:59:29.808Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Mace.cs",
-              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\Player\\MaceAndShield\\Mace.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\Player\\MaceAndShield\\Mace.cs",
-              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\Player\\MaceAndShield\\Mace.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Weapons\\Player\\MaceAndShield\\Mace.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAgAAAA",
+              "DocumentIndex": 0,
+              "Title": "LightSwitch.cs",
+              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\LightSwitch.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LightSwitch.cs",
+              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\LightSwitch.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LightSwitch.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T10:22:48.348Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Equipable.cs",
-              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\Player\\Equipable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\Player\\Equipable.cs",
-              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\Player\\Equipable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Weapons\\Player\\Equipable.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T12:15:22.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EquipmentManager.cs",
-              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\EquipmentManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EquipmentManager.cs",
-              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\EquipmentManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EquipmentManager.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwDIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T12:14:44.324Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SecondaryWeapon.cs",
-              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\SecondaryWeapon.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\SecondaryWeapon.cs",
-              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\SecondaryWeapon.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Weapons\\SecondaryWeapon.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T12:13:56.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Weapon.cs",
-              "DocumentMoniker": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\Weapon.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\Weapon.cs",
-              "ToolTip": "D:\\Knighthood\\KnighthoodProject\\Assets\\Scripts\\Weapons\\Weapon.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Weapons\\Weapon.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAIBZwGQAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T06:20:35.157Z"
+              "WhenOpened": "2024-06-08T06:57:56.673Z",
+              "EditorCaption": ""
             }
           ]
         }
